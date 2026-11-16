@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Placeholder: the initial A on a green background">
+  <rect width="400" height="480" fill="#1a4fe0"/>
+  <rect x="0" y="360" width="400" height="120" fill="#0a1f5c"/>
+  <path d="M128 318 200 128l72 190M156 250h88" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="44" y="408" width="14" height="28" rx="3" fill="#f4b223"/>
+  <rect x="66" y="388" width="14" height="48" rx="3" fill="#ffffff"/>
+</svg>
