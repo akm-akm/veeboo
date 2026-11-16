@@ -9,7 +9,7 @@ function photo(photos, slot, { eager = false, sizes = '100vw', className = '' } 
   // A srcset only helps when there really are two files.
   const srcset =
     item.srcSmall && item.srcSmall !== item.src
-      ? ` srcset="${esc(item.srcSmall)} 800w, ${esc(item.src)} ${esc(item.width || 1600)}w" sizes="${esc(sizes)}"`
+      ? ` srcset="${esc(item.srcSmall)} ${esc(item.smallWidth || 800)}w, ${esc(item.src)} ${esc(item.width || 1600)}w" sizes="${esc(sizes)}"`
       : '';
   const dims = item.width && item.height ? ` width="${esc(item.width)}" height="${esc(item.height)}"` : '';
   return `<img class="home-photo${className ? ` ${className}` : ''}" src="${esc(item.src)}"${srcset}${dims} alt="${esc(item.alt || '')}" ${eager ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}>`;
@@ -51,7 +51,7 @@ function heroFloats(run, index) {
   return bubble + chip;
 }
 
-function heroDemo(hero) {
+function heroDemo(hero, photos) {
   const tabs = hero.runs
     .map(
       (run, index) =>
@@ -71,8 +71,9 @@ function heroDemo(hero) {
     </div>`,
     )
     .join('\n');
-  // The hero-team and hero-phone photos are only 600px wide: behind a 500px window they read as soft
-  // and muddy, so the backdrop stays a drawn blue panel.
+  // With a team photo the photo is the stage and the window sits over its lower part (away from faces);
+  // without one, a drawn blue panel sits behind the window.
+  const teamPhoto = photo(photos, 'hero-team', { eager: true, sizes: '(min-width: 1280px) 640px, (min-width: 1000px) 52vw, 100vw' });
   const payback = hero.payback
     ? `<div class="home-float home-float--ledger">
       <div class="home-mini-ledger__head"><span>${esc(hero.payback.caption)}</span>${sampleTag(hero.payback.tag || 'Illustrative')}</div>
@@ -80,9 +81,10 @@ function heroDemo(hero) {
       ${hero.payback.total ? `<p class="home-mini-ledger__total"><span>${esc(hero.payback.total.label)}</span><strong>${esc(hero.payback.total.value)}</strong></p>` : ''}
     </div>`
     : '';
-  return `<div class="home-stage">
+  return `<div class="home-stage${teamPhoto ? ' home-stage--photo' : ''}">
+  ${teamPhoto ? `<div class="home-stage__photo">${teamPhoto}</div>` : ''}
   <div class="home-stage__main">
-  <div class="home-stage__backdrop" aria-hidden="true"></div>
+  ${teamPhoto ? '' : '<div class="home-stage__backdrop" aria-hidden="true"></div>'}
   <div class="home-demo" data-demo>
     <div class="home-demo__chrome" aria-hidden="true"><span></span><span></span><span></span><p>${esc(hero.windowTitle)}</p><em>${esc(hero.liveLabel)}</em></div>
     <div class="home-demo__inner">
@@ -102,7 +104,7 @@ function heroDemo(hero) {
 </div>`;
 }
 
-function hero(home, site) {
+function hero(home, site, photos) {
   const h = home.hero;
   return `<section class="home-hero">
   <div class="home-hero__bg" aria-hidden="true"></div>
@@ -114,7 +116,7 @@ function hero(home, site) {
       <div class="actions">${auditButton(site)}${button(h.secondaryCta.label, h.secondaryCta.href, 'ghost')}</div>
       <ul class="home-reassure">${(h.reassurances || []).map((item) => `<li>${icon('check', 16)}<span>${esc(item)}</span></li>`).join('')}</ul>
     </div>
-    ${heroDemo(h)}
+    ${heroDemo(h, photos)}
   </div>
   <div class="container home-stack">
     <p class="home-stack__label">${esc(home.stack.label)}</p>
@@ -378,7 +380,7 @@ export default function pages({ content, site }) {
   const pricing = content.pricing;
   const featured = studies.find((study) => study.featured) || studies[0];
 
-  const body = `${hero(home, site)}
+  const body = `${hero(home, site, photos)}
 ${problem(home.problem)}
 ${serviceList.length ? services(serviceList, home.services) : ''}
 ${industryList.length ? industries(industryList, home.industries, photos) : ''}
