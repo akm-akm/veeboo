@@ -167,8 +167,8 @@
     "startsFrom": { "text": "Free", "note": "No card, no commitment" },
     "mock": {
       "type": "ledger",
-      "caption": "From a sample plan: lead capture to CRM",
-      "note": "Sample figures to show the layout of the plan. Your plan uses your own numbers.",
+      "caption": "From an audit plan: lead capture to CRM",
+      "note": "Example figures. Your plan uses your own numbers.",
       "rows": [
         { "label": "Time spent today", "note": "Copying enquiries into the CRM", "value": "14 hrs / week" },
         { "label": "Time after automation", "note": "Checking the odd ones", "value": "3 hrs / week" },

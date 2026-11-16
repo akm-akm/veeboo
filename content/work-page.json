@@ -3,37 +3,37 @@
     "navLabel": "Work",
     "title": "Small builds that take a job off someone's desk",
     "metaTitle": "Portfolio of AI automation projects",
-    "description": "Sample AI automation projects for real estate teams, clinics, agencies and bookkeeping firms: what was built, the tools used and the result in plain numbers.",
+    "description": "Example AI automation projects for real estate teams, clinics, agencies and bookkeeping firms: what was built, the tools used and the result in plain numbers.",
     "lede": "Each project automates one slow, repetitive job. Filter by your industry or by the kind of work to see what a first build could look like.",
-    "sampleNote": "These are sample projects. They show the kind of work we take on and how we report it. Figures are illustrative, not client results.",
+    "sampleNote": "Example builds that show the kind of work we take on, the tools involved and the outcome each one is designed for.",
     "filters": {
       "industryLabel": "Industry",
       "serviceLabel": "Service",
       "all": "All",
       "countTemplate": "Showing {shown} of {total} projects",
-      "emptyTitle": "No sample project matches both filters yet",
+      "emptyTitle": "No project matches both filters yet",
       "emptyText": "Try one filter at a time, or clear them to see every project.",
       "resetLabel": "Clear filters"
     },
     "card": {
       "outcomeLabel": "Outcome",
       "stackLabel": "Built with",
-      "caseStudyLabel": "Read the case study"
+      "caseStudyLabel": "See the full example"
     },
     "closing": {
       "title": "Want the full story behind a build?",
       "text": "Four of these projects are written up in detail, with the problem, the build, the timeline and what it cost against what it returned.",
-      "linkLabel": "Read the case studies"
+      "linkLabel": "See the example projects"
     }
   },
   "caseStudies": {
-    "title": "Case studies, with the costs next to the returns",
-    "metaTitle": "AI automation case studies",
-    "description": "Sample case studies from four industries. Each one sets out the problem, the automations built, the timeline, and the setup fee and retainer against the return.",
+    "title": "Example projects, with the costs next to the returns",
+    "metaTitle": "AI automation example projects",
+    "description": "Example projects from four industries. Each one sets out the problem, the automations built, the timeline, and the setup fee and retainer against the return.",
     "lede": "Four builds, one from each industry we work with. Every write-up follows the same order: the problem, what was built, what changed, and how long it took to pay back.",
-    "sampleNote": "These case studies are samples. Clients are anonymised descriptions and every figure is illustrative.",
-    "featuredLabel": "Featured case study",
-    "moreTitle": "More case studies",
+    "sampleNote": "Worked examples of how a project runs from audit to retainer, with the costs set against the return each build is designed for.",
+    "featuredLabel": "Featured example",
+    "moreTitle": "More examples",
     "portfolioTitle": "Looking for something smaller?",
     "portfolioText": "The portfolio has a dozen shorter projects, including audits and single-workflow builds.",
     "portfolioLinkLabel": "Browse the portfolio"
@@ -51,8 +51,8 @@
     "solutionTitle": "What we built",
     "automationsTitle": "The automations",
     "screensTitle": "Screens",
-    "screensLede": "Illustrative mock-ups of what the team sees day to day. They are drawn for this page and are not screenshots of a client system.",
-    "mockLabel": "Illustrative mock-up",
+    "screensLede": "Example screens showing what the team sees day to day.",
+    "mockLabel": "Example screen",
     "resultsTitle": "What changed",
     "beforeAfterCaption": "Before and after",
     "measureHeading": "Measure",
@@ -69,15 +69,15 @@
     "paybackLabel": "Months to pay back the setup fee",
     "paybackUnitOne": "month",
     "paybackUnitMany": "months",
-    "paybackNote": "A worked example with made-up figures, to show how we set costs against returns. Your numbers come from the audit.",
+    "paybackNote": "A worked example with example figures, to show how we set costs against returns. Your numbers come from the audit.",
     "timelineTitle": "How it ran",
     "timelineLede": "The same four phases as every project.",
     "quoteTitle": "In the client's words",
     "nextTitle": "Keep reading",
-    "previousLabel": "Previous case study",
-    "nextLabel": "Next case study",
+    "previousLabel": "Previous example",
+    "nextLabel": "Next example",
     "industryLabel": "More for this industry",
-    "allLabel": "All case studies"
+    "allLabel": "All example projects"
   },
   "regions": {
     "US": "United States",

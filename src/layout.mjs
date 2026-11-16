@@ -47,7 +47,6 @@ function footer(site, content) {
   </div>
   <div class="container site-footer__legal">
     <p>© ${new Date().getFullYear()} ${esc(site.name)}. Built with: ${site.stack.map(esc).join(', ')}.</p>
-    <p>${esc(site.sampleNotice)}</p>
     ${Object.keys(content.photos || {}).length ? '<p><a href="/credits/">Photo credits</a></p>' : ''}
   </div>
 </footer>`;

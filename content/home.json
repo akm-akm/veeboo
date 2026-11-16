@@ -412,13 +412,13 @@
     }
   },
   "caseStudy": {
-    "eyebrow": "Featured case study",
+    "eyebrow": "Example project",
     "clientLabel": "Client",
     "durationLabel": "Timeline",
     "stackLabel": "Built with",
-    "title": "What one project looked like",
-    "linkLabel": "Read the case study",
-    "allLabel": "All case studies",
+    "title": "What a project looks like",
+    "linkLabel": "See the full example",
+    "allLabel": "All example projects",
     "resultsCaption": "Results after the pilot"
   },
   "testimonials": {

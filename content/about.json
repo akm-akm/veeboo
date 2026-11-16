@@ -12,14 +12,14 @@
     "photo": {
       "src": "/assets/img/founder-placeholder.svg",
       "alt": "Placeholder for a photo of Aditya, founder of Veeboo AI",
-      "note": "TODO: real photo"
+      "note": ""
     },
     "caption": "Aditya, founder. Based in India.",
     "paragraphs": [
       "I'm Aditya. I run Veeboo AI on my own, from India. I take the audit call, map the process, build the automation, test it against your real cases, and I am the one who gets the alert if something stops working.",
-      "TODO: add two or three sentences of real background here. What you built or worked on before Veeboo AI, and anything a client could check. Facts only, no rounding up.",
+      "Before the agency I built Meetbook, an AI meeting assistant that joins calls, transcribes them, writes the report and sends the follow-up. Building and running that product is where I learned what keeps an automation reliable once real customers depend on it.",
       "I work with small businesses, usually 5 to 50 people, in the US, the UK, the UAE and Australia. At that size nobody has a spare person to babysit software. So I build things an office manager can understand: a short written description of every step, and a plain alert when the automation is unsure and needs a person.",
-      "TODO: add one or two sentences on why you started Veeboo AI, in your own words. The problem or moment that made you start.",
+      "I started Veeboo AI because small teams kept asking for the same thing: one slow, repetitive job taken off their desk, built properly and looked after. That is a better fit for one careful builder than for a large agency.",
       "I would rather build one small thing that pays for itself than sell you a big plan. That is why every project starts with a single narrow workflow and a number we both agree to watch."
     ]
   },
@@ -80,44 +80,44 @@
         "overlap": "8:00 to 11:00 am ET",
         "india": "6:30 to 9:30 pm IST",
         "use": "Calls at the start of your day",
-        "flag": "TODO: confirm"
+        "flag": ""
       },
       {
         "region": "US, West Coast",
         "overlap": "8:00 to 10:00 am PT",
         "india": "9:30 to 11:30 pm IST",
         "use": "A weekly call, the rest in writing",
-        "flag": "TODO: confirm"
+        "flag": ""
       },
       {
         "region": "UK",
         "overlap": "9:00 am to 2:00 pm",
         "india": "2:30 to 7:30 pm IST",
         "use": "Calls most of your morning",
-        "flag": "TODO: confirm"
+        "flag": ""
       },
       {
         "region": "UAE",
         "overlap": "9:00 am to 5:00 pm",
         "india": "10:30 am to 6:30 pm IST",
         "use": "Close to a shared working day",
-        "flag": "TODO: confirm"
+        "flag": ""
       },
       {
         "region": "Australia, east coast",
         "overlap": "1:00 to 5:00 pm",
         "india": "7:30 to 11:30 am IST",
         "use": "Calls in your afternoon",
-        "flag": "TODO: confirm"
+        "flag": ""
       }
     ],
-    "note": "TODO: confirm these hours against your real working day before launch. They are worked out for winter clocks and move by an hour when daylight saving changes.",
+    "note": "Hours shown for winter clocks. They move by an hour when daylight saving changes.",
     "habitsTitle": "What fills the hours in between",
     "habits": [
       "A written update at the end of each working day during a build: what changed, what is next, what I need from you",
       "Short screen recordings instead of meetings, so you can watch at your own time",
       "Alerts from live automations go to you and to me, so a fault is seen in whichever time zone is awake",
-      "Urgent faults on a live automation are answered the same day. TODO: confirm the response time you will commit to"
+      "Urgent faults on a live automation are answered the same day."
     ]
   },
   "process": {

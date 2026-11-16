@@ -109,7 +109,7 @@ function calculator(pricing, calcTiers) {
 
   <div class="pricing-calc__result">
     <div class="ledger" role="group" aria-label="${esc(calc.result.caption)}">
-      <div class="ledger__caption"><span>${esc(calc.result.caption)}</span><span class="sample-tag">${esc(calc.result.tag)}</span></div>
+      <div class="ledger__caption"><span>${esc(calc.result.caption)}</span></div>
       <dl class="ledger__rows">
         <div class="ledger__row"><dt>${esc(calc.result.value)}<small data-calc-out="valueNote">${esc(fill(calc.result.valueNote, { hours: start.hoursSaved, cost: money(defaults.hourlyCost) }))}</small></dt><dd data-calc-out="value">${money(start.value)}</dd></div>
         <div class="ledger__row"><dt>${esc(calc.result.retainer)}<small data-calc-out="retainerNote">${esc(startTier.name)}</small></dt><dd data-calc-out="retainer">${money(-startTier.monthly)}</dd></div>

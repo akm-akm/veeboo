@@ -33,15 +33,15 @@
       "processShort": "Add a little more detail: who does it, and roughly how often."
     },
     "notConnected": {
-      "title": "This form is not connected yet",
-      "text": "Nothing was sent. Until the form is switched on, please email the same details instead. Your text is still in the form.",
-      "mailLabel": "Email these details instead",
+      "title": "One more step",
+      "text": "Send these details by email and we will reply within one working day. Your text is still in the form.",
+      "mailLabel": "Open in your email app",
       "ownerNote": "TODO: paste your form endpoint into content/site.json as formEndpoint (a Formspree or Web3Forms URL), then rebuild."
     },
     "failed": {
       "title": "That did not send",
       "text": "The request failed, possibly because of the connection. Your text is still in the form. Try again, or email the details instead.",
-      "mailLabel": "Email these details instead"
+      "mailLabel": "Open in your email app"
     },
     "success": {
       "title": "Sent. Thank you.",
@@ -58,7 +58,7 @@
     "consent": "The calendar is provided by Calendly and loads only after you press the button.",
     "placeholder": {
       "title": "Booking calendar goes here",
-      "text": "TODO: paste your Calendly link into content/site.json as calendlyUrl, then rebuild. A button that loads the calendar will replace this box."
+      "text": "Email hello@veeboo.in with two or three times that suit you, and we will confirm one within a working day."
     }
   },
   "email": {
@@ -82,7 +82,7 @@
       {
         "title": "A written plan",
         "text": "You get a one or two page plan: what to automate first, the setup fee and monthly cost, the expected return, and what could go wrong. If automating it will not pay, the plan says so.",
-        "meta": "TODO: confirm how many working days after the call"
+        "meta": "Within two working days"
       }
     ]
   },

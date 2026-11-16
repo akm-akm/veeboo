@@ -46,7 +46,7 @@ function form(copy, site, industries) {
   return `<div class="contact-panel">
   <h2 class="h3">${esc(copy.title)}</h2>
   <p class="muted">${esc(copy.intro)}</p>
-  ${connected ? '' : todoNote(copy.notConnected.ownerNote)}
+
   <form class="form contact-form" ${action} data-contact-form data-endpoint="${esc(site.formEndpoint)}" data-email="${esc(site.email)}">
     <div class="field">
       <label for="contact-name">${esc(fields.name.label)}</label>
@@ -104,7 +104,7 @@ function booking(copy, site) {
     : `<div class="contact-booking__frame contact-booking__frame--todo">
       <span class="contact-booking__icon">${icon('calendar-check', 24)}</span>
       <p class="contact-booking__placeholder-title">${esc(copy.placeholder.title)}</p>
-      ${todoNote(copy.placeholder.text)}
+      <p>${esc(copy.placeholder.text)}</p>
     </div>`;
   return `<div class="contact-booking">
   <h2 class="h3">${esc(copy.title)}</h2>

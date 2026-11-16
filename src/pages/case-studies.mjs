@@ -143,7 +143,7 @@ function detailPage(study, index, studies, { content, site, copy, regions }) {
   const body = `${pageHero({
     title: study.title,
     lede: study.summary,
-    crumbs: [{ label: 'Case studies', href: '/case-studies/' }, { label: industryName }],
+    crumbs: [{ label: 'Example projects', href: '/case-studies/' }, { label: industryName }],
     actions: `<div class="tags study-tags"><span class="tag">${esc(industryName)}</span>${serviceTags}<span class="tag tag--plain">${icon('globe', 14)}${esc(study.region)}</span>${study.sample ? sampleTag() : ''}</div>`,
     aside: ledger({ caption: copy.resultsCaption, rows: study.results || [], sample: study.sample }),
   })}
@@ -236,7 +236,7 @@ ${section({
           '@type': 'BreadcrumbList',
           itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Home', item: `${site.url}/` },
-            { '@type': 'ListItem', position: 2, name: 'Case studies', item: `${site.url}/case-studies/` },
+            { '@type': 'ListItem', position: 2, name: 'Example projects', item: `${site.url}/case-studies/` },
             { '@type': 'ListItem', position: 3, name: study.title, item: url },
           ],
         },
@@ -252,10 +252,10 @@ function listingPage(studies, { content, site, copy }) {
   const rest = studies.filter((study) => study !== featured);
   const card = (study) => caseCard(study, nameOf(content.industries, study.industry));
 
-  const body = `${pageHero({ title: copy.title, lede: copy.lede, crumbs: [{ label: 'Case studies' }] })}
+  const body = `${pageHero({ title: copy.title, lede: copy.lede, crumbs: [{ label: 'Example projects' }] })}
 <section class="section studies-section">
   <div class="container">
-    <p class="work-note">${sampleTag()}<span>${esc(copy.sampleNote)}</span></p>
+    <p class="work-note"><span>${esc(copy.sampleNote)}</span></p>
     <h2 class="studies-heading">${esc(copy.featuredLabel)}</h2>
     <div class="studies-featured">${card(featured)}</div>
     ${rest.length ? `<h2 class="studies-heading">${esc(copy.moreTitle)}</h2><div class="grid grid--3">${rest.map(card).join('\n')}</div>` : ''}
@@ -281,7 +281,7 @@ function listingPage(studies, { content, site, copy }) {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Case studies', item: `${site.url}/case-studies/` },
+        { '@type': 'ListItem', position: 2, name: 'Example projects', item: `${site.url}/case-studies/` },
       ],
     },
   };

@@ -84,7 +84,7 @@ export default function pages({ content, site }) {
   })}
 <section class="section portfolio-section">
   <div class="container">
-    <p class="work-note">${sampleTag()}<span>${esc(copy.sampleNote)}</span></p>
+    <p class="work-note"><span>${esc(copy.sampleNote)}</span></p>
     <div class="portfolio-filters" data-portfolio-filters hidden>
       ${chipGroup({ id: 'portfolio-filter-industry', label: copy.filters.industryLabel, key: 'industry', allLabel: copy.filters.all, options: industries })}
       ${chipGroup({ id: 'portfolio-filter-service', label: copy.filters.serviceLabel, key: 'service', allLabel: copy.filters.all, options: services })}

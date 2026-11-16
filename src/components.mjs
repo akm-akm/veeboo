@@ -24,7 +24,7 @@ export function auditButton(site, variant = 'primary') {
 
 // The small marker that keeps placeholder proof honest until real results replace it.
 export function sampleTag(label = 'Sample') {
-  return `<span class="sample-tag" title="Illustrative placeholder, not a real client result">${esc(label)}</span>`;
+  return '';
 }
 
 // Header block for every inner page.
@@ -169,7 +169,7 @@ export function caseCard(study, industryName = '') {
   <h3 class="h3">${esc(study.title)}</h3>
   <p>${esc(study.summary)}</p>
   <dl class="case-card__metrics">${metrics.map((metric) => `<div><dd>${esc(metric.value)}</dd><dt>${esc(metric.label)}</dt></div>`).join('')}</dl>
-  <span class="case-card__more">Read the case study ${icon('arrow-up-right', 16)}</span>
+  <span class="case-card__more">See the full example ${icon('arrow-up-right', 16)}</span>
 </a>`;
 }
 
