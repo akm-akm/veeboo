@@ -2395,7 +2395,8 @@ a.card:hover {
   gap: 0.75rem 1.25rem;
   margin-top: clamp(4rem, 8vw, 6rem);
   padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
+  /* A rule the width of the content, not of the padded container. */
+  background: linear-gradient(var(--line), var(--line)) var(--gutter) 0 / calc(100% - 2 * var(--gutter)) 1px no-repeat;
 }
 .home-stack__label {
   font-weight: 600;
@@ -3094,7 +3095,7 @@ a.card:hover {
 }
 /* A shared cobalt grade so four stock photos read as one set. */
 .home-industry__media.has-photo .home-photo {
-  filter: saturate(0.7) contrast(1.05);
+  filter: saturate(0.85);
 }
 .home-industry__media.has-photo::before,
 .home-industry__media.has-photo::after {
@@ -3106,10 +3107,10 @@ a.card:hover {
 .home-industry__media.has-photo::before {
   background: var(--brand);
   mix-blend-mode: color;
-  opacity: 0.35;
+  opacity: 0.14;
 }
 .home-industry__media.has-photo::after {
-  background: linear-gradient(180deg, rgba(26, 79, 224, 0.1) 30%, rgba(10, 31, 92, 0.6));
+  background: linear-gradient(180deg, transparent 45%, rgba(10, 31, 92, 0.5));
 }
 .home-industry__chip {
   position: absolute;
@@ -3204,10 +3205,16 @@ a.card:hover {
   inset: -12px;
   width: calc(100% + 24px);
   height: calc(100% + 24px);
-  opacity: 0.22;
+  opacity: 0.4;
   mix-blend-mode: luminosity;
-  /* The photo is 600px wide; a slight blur makes the softness read as a deliberate duotone. */
-  filter: grayscale(1) blur(2px);
+  filter: grayscale(1) contrast(1.1);
+}
+/* Keep the text side deep blue (AA for the light copy) and let the architecture show on the right. */
+.home-band__bg:has(.home-band__photo)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--brand-deep) 15%, rgba(10, 31, 92, 0.82) 50%, rgba(10, 31, 92, 0.35));
 }
 .home-band__grid {
   display: grid;
@@ -3258,8 +3265,8 @@ a.card:hover {
 }
 @media (min-width: 900px) {
   .home-process__top {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-    align-items: end;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
     gap: 4rem;
   }
 }
@@ -3287,16 +3294,8 @@ a.card:hover {
   overflow: hidden;
   aspect-ratio: 3 / 2;
 }
-.home-process__photo::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--brand);
-  mix-blend-mode: color;
-  opacity: 0.3;
-}
-.home-process__photo .home-photo {
-  filter: saturate(0.7);
+.home-process__photo {
+  box-shadow: 0 30px 60px -36px rgba(10, 31, 92, 0.55);
 }
 /* With a photo, the plan card rides on its lower corner. */
 .home-process__visual {
@@ -3304,7 +3303,8 @@ a.card:hover {
   display: grid;
 }
 .home-process__visual .home-process__photo {
-  margin-left: 12%;
+  margin-left: 10%;
+  aspect-ratio: 4 / 3;
 }
 .home-process__visual .home-plan {
   width: min(88%, 19rem);
@@ -3849,6 +3849,125 @@ a.card:hover {
 @media (max-width: 999px) {
   .home-mock--chat .home-mock__msg:nth-child(n + 6) {
     display: none;
+  }
+}
+
+/* ---------- Hero with the team photo as the stage ----------
+   The photo sits on top; the product window overlaps only its lower third (desk and laptop), so faces stay clear. */
+.home-stage__photo {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: calc(var(--radius-l) + 4px);
+  overflow: hidden;
+  background: var(--brand-tint);
+  box-shadow: 0 30px 60px -40px rgba(10, 31, 92, 0.6);
+}
+.home-stage__photo .home-photo {
+  object-position: 40% 30%;
+}
+.home-stage__photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(10, 31, 92, 0.35));
+}
+.home-stage__photo,
+.home-stage--photo .home-stage__main {
+  animation: home-rise 0.9s 0.2s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.home-stage--photo .home-stage__main {
+  margin-top: -3.25rem;
+  margin-inline: 0.5rem;
+  animation-delay: 0.4s;
+}
+@media (max-width: 639px) {
+  .home-stage--photo {
+    padding-top: 0;
+  }
+}
+@media (min-width: 640px) {
+  .home-stage--photo .home-stage__main {
+    margin: -6rem 1.5rem 0;
+  }
+}
+/* Tablets: the WhatsApp bubble rides on the photo's bright right side, the other two cards sit under the window. */
+@media (min-width: 640px) and (max-width: 999px) {
+  .home-stage--photo .home-floats {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+  .home-stage--photo .home-floats > * {
+    position: relative;
+    z-index: 1;
+  }
+  .home-stage--photo .home-floats .home-float--bubble:not([hidden]) {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 16rem;
+  }
+}
+@media (min-width: 1000px) {
+  .home-stage--photo .home-stage__main {
+    /* 16:10 photo: start the window two thirds down it. */
+    margin: -21% 0 0 12%;
+  }
+  .home-stage--photo .home-floats {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+  .home-stage--photo .home-floats > * {
+    pointer-events: auto;
+  }
+  .home-stage--photo .home-float--ledger {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 15rem;
+  }
+  .home-hero__grid:has(.home-stage--photo) {
+    align-items: start;
+  }
+  .home-hero__grid:has(.home-stage--photo) .home-hero__copy {
+    padding-top: clamp(1rem, 4vw, 3.5rem);
+  }
+  .home-stage--photo .home-floats .home-float--bubble:not([hidden]) {
+    display: block;
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 14rem;
+    /* Margins in % follow the stage width, so the bubble tracks the photo's height:
+       it sits over the left of the photo, below the standing colleague's face. */
+    margin-top: 11%;
+  }
+  .home-stage--photo .home-floats .home-float--chip:not([hidden]) {
+    position: absolute;
+    right: -1.5rem;
+    bottom: -1.25rem;
+    margin: 0;
+  }
+  .home-stage--photo .home-demo__panel,
+  .home-stage--photo .home-demo__note {
+    padding-right: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .home-stage--photo .home-stage__main {
+    margin-right: 0;
+  }
+  .home-stage--photo .home-floats {
+    top: 0;
+    right: 0;
+  }
+  .home-stage--photo .home-float--ledger {
+    right: -3rem;
   }
 }
 
