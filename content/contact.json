@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Book a free AI audit",
+    "description": "Book a free 30-minute AI audit. Describe one slow, repetitive process and get a written, costed plan for automating it, whether or not you hire us."
+  },
+  "hero": {
+    "title": "Book a free AI audit",
+    "lede": "Tell me about one slow, repetitive process. You get a 30-minute call and a written, costed plan for automating it. The plan is yours to keep, whether or not you hire us."
+  },
+  "form": {
+    "title": "Send the details",
+    "intro": "Five questions. I read every one myself and reply within one working day.",
+    "fields": {
+      "name": { "label": "Your name", "placeholder": "" },
+      "email": { "label": "Work email", "hint": "The plan is sent here. No newsletter." },
+      "company": { "label": "Company", "hint": "Optional" },
+      "niche": { "label": "What kind of business is it?", "placeholder": "Choose one", "other": "Something else" },
+      "process": {
+        "label": "What is the slow, repetitive process?",
+        "hint": "Two or three sentences is enough. Who does it, how often, and which tools it touches."
+      }
+    },
+    "submit": "Send and request my audit",
+    "sending": "Sending",
+    "privacy": "Your details are used to reply to this request and for nothing else.",
+    "errors": {
+      "summary": "Please fix the highlighted fields and send again.",
+      "nameRequired": "Enter your name so I know who to reply to.",
+      "emailRequired": "Enter your email address so I can send the plan.",
+      "emailInvalid": "That email address looks incomplete. It should look like name@company.com.",
+      "nicheRequired": "Choose the option closest to your business, or \"Something else\".",
+      "processRequired": "Describe the process you want to stop doing by hand.",
+      "processShort": "Add a little more detail: who does it, and roughly how often."
+    },
+    "notConnected": {
+      "title": "This form is not connected yet",
+      "text": "Nothing was sent. Until the form is switched on, please email the same details instead. Your text is still in the form.",
+      "mailLabel": "Email these details instead",
+      "ownerNote": "TODO: paste your form endpoint into content/site.json as formEndpoint (a Formspree or Web3Forms URL), then rebuild."
+    },
+    "failed": {
+      "title": "That did not send",
+      "text": "The request failed, possibly because of the connection. Your text is still in the form. Try again, or email the details instead.",
+      "mailLabel": "Email these details instead"
+    },
+    "success": {
+      "title": "Sent. Thank you.",
+      "text": "I will reply within one working day with two or three times for the call. If you prefer to pick a time now, use the booking box on this page."
+    },
+    "mailSubject": "AI audit request"
+  },
+  "booking": {
+    "title": "Prefer to pick a time?",
+    "text": "Skip the form and book the 30-minute audit call directly. Times are shown in your own time zone.",
+    "button": "Show available times",
+    "loading": "Loading the calendar",
+    "fallback": "Open the booking page in a new tab",
+    "consent": "The calendar is provided by Calendly and loads only after you press the button.",
+    "placeholder": {
+      "title": "Booking calendar goes here",
+      "text": "TODO: paste your Calendly link into content/site.json as calendlyUrl, then rebuild. A button that loads the calendar will replace this box."
+    }
+  },
+  "email": {
+    "title": "Or just write",
+    "text": "A plain email works as well as the form."
+  },
+  "after": {
+    "title": "What happens after you book",
+    "lede": "Three things, in this order.",
+    "steps": [
+      {
+        "title": "A short reply with two questions",
+        "text": "Within one working day I confirm the time and ask for anything missing, usually which tools you use and roughly how often the task happens.",
+        "meta": "Within one working day"
+      },
+      {
+        "title": "The 30-minute call",
+        "text": "You walk me through the process as it runs today, screen shared if you like. I ask where it breaks and what a mistake costs. No slides and no sales pitch.",
+        "meta": "30 minutes, by video"
+      },
+      {
+        "title": "A written plan",
+        "text": "You get a one or two page plan: what to automate first, the setup fee and monthly cost, the expected return, and what could go wrong. If automating it will not pay, the plan says so.",
+        "meta": "TODO: confirm how many working days after the call"
+      }
+    ]
+  },
+  "bring": {
+    "title": "What to bring to the call",
+    "items": [
+      "One process, not five. The one that eats the most hours or loses the most enquiries",
+      "A rough count: how many times a week it happens and how long each one takes",
+      "The names of the tools involved, such as your CRM, phone system, booking software or spreadsheet",
+      "One real example, with customer details removed if needed",
+      "The person who does the task today, if that is not you"
+    ]
+  }
+}

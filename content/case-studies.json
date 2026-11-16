@@ -1,0 +1,501 @@
+[
+  {
+    "slug": "portal-leads-answered-in-under-a-minute",
+    "title": "Every portal lead answered in under a minute",
+    "metaDescription": "Sample case study: a 12-agent Texas brokerage replies to every property portal lead by text in under a minute, then books the viewing on the right calendar.",
+    "clientType": "12-agent residential brokerage, Austin, Texas",
+    "industry": "real-estate",
+    "services": ["ai-agents-chatbots", "workflow-automation"],
+    "region": "US",
+    "teamSize": "12 agents, 2 office staff",
+    "duration": "8 weeks from audit to full rollout",
+    "featured": true,
+    "sample": true,
+    "summary": "Portal enquiries used to wait hours for a reply on evenings and weekends. Now each one gets a text within a minute, three qualifying questions, and a viewing slot on the right agent's calendar.",
+    "results": [
+      { "label": "First reply to a new lead", "value": "47 sec", "note": "Was about 3 hours" },
+      { "label": "Agent admin time back", "value": "11 hrs/week", "note": "Across the team" },
+      { "label": "Viewings booked by the assistant", "value": "38/month", "note": "Third month after launch" },
+      { "label": "Leads left without a reply", "value": "0", "note": "Was about 1 in 5 at weekends" }
+    ],
+    "problem": [
+      "Most enquiries arrived from two property portals and the brokerage's own website, and most of them arrived after 6pm. Whoever was on rota copied each one into the CRM by hand and called back when they could.",
+      "On a weekday that meant a reply within the hour. On a Saturday it could mean Monday. By then the buyer had usually spoken to another agent.",
+      "The owner did not want more software for agents to log in to. She wanted every lead answered quickly, and her agents talking only to people who were ready to view."
+    ],
+    "solution": {
+      "paragraphs": [
+        "We started with one portal and one agent for three weeks. Once the replies read the way the team would write them, we added the second portal, the website form and the rest of the agents.",
+        "The assistant only does the first five minutes. It replies, asks about budget, area and timing, and offers viewing times from the agent's real calendar. A person takes over from there, with a short summary waiting in the CRM."
+      ],
+      "automations": [
+        { "name": "Instant lead reply", "what": "A text goes out within a minute of the enquiry, naming the property the buyer asked about." },
+        { "name": "Qualifying questions", "what": "Budget, preferred area and move date, asked one at a time in plain language." },
+        { "name": "Viewing booking", "what": "Free slots are read from the agent's calendar, and the booking is confirmed to both sides." },
+        { "name": "Handover summary", "what": "The CRM record is created with the answers and a three-line summary, so the agent never starts cold." },
+        { "name": "Quiet-lead nudge", "what": "If a buyer goes silent, one polite follow-up is sent the next morning, then the lead is passed to a person." }
+      ],
+      "flow": {
+        "title": "What happens when a lead arrives",
+        "nodes": [
+          { "icon": "inbox", "label": "Lead arrives", "sub": "Portal or website form" },
+          { "icon": "send", "label": "Text reply", "sub": "Within a minute" },
+          { "icon": "list-checks", "label": "Three questions", "sub": "Budget, area, timing" },
+          { "icon": "calendar-check", "label": "Viewing booked", "sub": "On the agent's calendar" },
+          { "icon": "user-check", "label": "Agent takes over", "sub": "Summary in the CRM" }
+        ]
+      }
+    },
+    "stack": ["n8n", "OpenAI API", "SMS provider", "Shared calendar", "The brokerage's existing CRM"],
+    "timeline": [
+      { "phase": "Audit", "duration": "1 week", "what": "Followed 40 recent leads from enquiry to first call, and timed every gap along the way." },
+      { "phase": "Pilot", "duration": "3 weeks", "what": "One portal, one agent. Every reply was reviewed daily and the wording adjusted with the team." },
+      { "phase": "Build", "duration": "4 weeks", "what": "Second portal, website form, all 12 calendars, the CRM handover and the morning nudge." },
+      { "phase": "Retainer", "duration": "Monthly", "what": "Reply wording reviewed each month, new listings and agents added, and a one-page report for the owner." }
+    ],
+    "beforeAfter": [
+      { "measure": "First reply to a new lead", "before": "About 3 hours, longer at weekends", "after": "47 seconds, any hour" },
+      { "measure": "Getting a lead into the CRM", "before": "Copied in by hand", "after": "Created automatically with a summary" },
+      { "measure": "Booking a viewing", "before": "Two or three calls back and forth", "after": "Offered and confirmed by text" },
+      { "measure": "Weekend enquiries", "before": "Picked up on Monday", "after": "Answered and booked the same day" }
+    ],
+    "screens": [
+      {
+        "kind": "table",
+        "frame": "browser",
+        "address": "crm / new leads",
+        "caption": "The lead list agents see each morning. Every row already has answers and a next step.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "columns": ["Lead", "Asked about", "Budget", "Status"],
+        "rows": [
+          ["J. Morales", "3-bed, Mueller", "$520k", { "pill": "Viewing Sat 10:30", "tone": "good" }],
+          ["K. Osei", "Condo, East Side", "$340k", { "pill": "Viewing Thu 17:00", "tone": "good" }],
+          ["R. Patel", "4-bed, Circle C", "$710k", { "pill": "Needs a call", "tone": "warn" }],
+          ["S. Lindqvist", "2-bed, Zilker", "$450k", { "pill": "Nudge sent", "tone": "plain" }]
+        ]
+      },
+      {
+        "kind": "chat",
+        "frame": "phone",
+        "caption": "A Saturday evening enquiry, answered and booked without anyone at a desk.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "title": "Brokerage assistant",
+        "subtitle": "Text message",
+        "messages": [
+          { "from": "us", "text": "Hi Jo, thanks for asking about the 3-bed on Mueller. Are you looking to move in the next three months?", "time": "19:42" },
+          { "from": "them", "text": "Yes, ideally by March. Budget is around 520.", "time": "19:44" },
+          { "from": "us", "text": "That fits. Dana can show you round Saturday at 10:30 or Sunday at 2:00. Which suits?", "time": "19:44" },
+          { "from": "them", "text": "Saturday 10:30 please.", "time": "19:45" },
+          { "from": "us", "text": "Booked. Dana will meet you at the property. You will get a reminder on Friday.", "time": "19:45" }
+        ]
+      },
+      {
+        "kind": "runlog",
+        "frame": "browser",
+        "address": "automation log / lead 2,118",
+        "caption": "The same lead as the log records it, from enquiry to calendar entry.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "title": "One lead, minute by minute",
+        "events": [
+          { "time": "19:41:12", "who": "customer", "text": "Enquiry received from the portal." },
+          { "time": "19:41:59", "who": "ai", "text": "First text sent." },
+          { "time": "19:44:30", "who": "ai", "text": "Budget and timing recorded. Two viewing slots offered." },
+          { "time": "19:45:20", "who": "system", "text": "Viewing added to the agent's calendar and the CRM." },
+          { "time": "08:05:00", "who": "team", "text": "Agent reads the summary and confirms." }
+        ],
+        "footer": "Enquiry to booked viewing: 4 minutes"
+      }
+    ],
+    "quote": {
+      "quote": "I used to check the portal inbox at my daughter's soccer games. Now I open the CRM on Monday and the weekend viewings are already in the calendar, with notes on what each buyer wants.",
+      "name": "Dana Whitfield",
+      "role": "Broker-owner",
+      "company": "12-agent residential brokerage, Austin TX",
+      "industry": "real-estate",
+      "sample": true
+    },
+    "costs": {
+      "currency": "$",
+      "setupFee": 4500,
+      "retainer": 1200,
+      "monthlyValue": 3400,
+      "valueBasis": "48 agent hours a month at $45, plus a cautious allowance for viewings that used to go cold"
+    }
+  },
+  {
+    "slug": "whatsapp-and-phone-receptionist-for-a-dental-practice",
+    "title": "A receptionist that answers every call and WhatsApp message",
+    "metaDescription": "Sample case study: a four-chair Manchester dental practice has calls and WhatsApp messages answered day and night, with reminders that reduce missed appointments.",
+    "clientType": "Four-chair dental practice, Manchester",
+    "industry": "clinics-dental",
+    "services": ["voice-whatsapp-receptionists", "workflow-automation"],
+    "region": "UK",
+    "teamSize": "3 dentists, 2 hygienists, 3 front desk staff",
+    "duration": "9 weeks from audit to full rollout",
+    "featured": false,
+    "sample": true,
+    "summary": "The front desk could not answer the phone and look after the patient in front of them at the same time. An AI receptionist now picks up every call and WhatsApp message, books routine visits, and passes anything urgent to a person.",
+    "results": [
+      { "label": "Missed calls", "value": "3/week", "note": "Was 41 a week" },
+      { "label": "Missed appointments", "value": "11/month", "note": "Was 26 a month" },
+      { "label": "Front desk phone time back", "value": "9 hrs/week" },
+      { "label": "Recall visits booked", "value": "34/month", "note": "From automatic reminders" }
+    ],
+    "problem": [
+      "The phone rang most during the morning rush, exactly when the front desk was checking patients in. Calls that went to voicemail were rarely returned the same day.",
+      "Patients also messaged the practice on WhatsApp, where replies depended on who had the practice phone that afternoon.",
+      "Reminders were sent by hand on quiet days and skipped on busy ones, so missed appointments rose in the busiest weeks."
+    ],
+    "solution": {
+      "paragraphs": [
+        "The receptionist answers on the practice's existing number and WhatsApp line. It books, moves and cancels routine appointments in the practice diary, and answers the common questions about opening hours, parking and prices.",
+        "It never gives clinical advice. Anyone describing pain, swelling or bleeding is passed straight to a member of staff during hours, and given the emergency line out of hours.",
+        "We piloted on WhatsApp alone for three weeks before switching on the phone line, so the team could read every conversation and correct the wording."
+      ],
+      "automations": [
+        { "name": "Call and message answering", "what": "Every call and WhatsApp message is answered, day and night, in the practice's own tone." },
+        { "name": "Appointment booking", "what": "Check-ups and hygiene visits are booked, moved or cancelled directly in the diary." },
+        { "name": "Appointment reminders", "what": "A message two days before and again on the morning, with a one-tap option to rebook." },
+        { "name": "Patient recall", "what": "Patients due a check-up get a message offering three times. A reply books the visit." },
+        { "name": "Urgent handover", "what": "Pain or swelling is flagged to the front desk at once, with the patient's own words attached." }
+      ],
+      "flow": {
+        "title": "How a call is handled",
+        "nodes": [
+          { "icon": "phone-call", "label": "Call or message", "sub": "Any hour" },
+          { "icon": "bot", "label": "Receptionist answers", "sub": "Asks what is needed" },
+          { "icon": "git-branch", "label": "Routine or urgent", "sub": "Urgent goes to staff" },
+          { "icon": "calendar-check", "label": "Diary updated", "sub": "Booked, moved or cancelled" },
+          { "icon": "bell", "label": "Reminders sent", "sub": "Two days and same day" }
+        ]
+      }
+    },
+    "stack": ["Voice AI", "WhatsApp Business API", "Make", "Claude API", "The practice's existing diary system"],
+    "timeline": [
+      { "phase": "Audit", "duration": "1 week", "what": "Counted calls, voicemails and missed appointments for a month, and listed the 20 questions patients ask most." },
+      { "phase": "Pilot", "duration": "3 weeks", "what": "WhatsApp only, routine bookings only. Front desk read every conversation at the end of each day." },
+      { "phase": "Build", "duration": "5 weeks", "what": "Phone line, reminders, recall messages and the urgent handover, tested with staff acting as patients." },
+      { "phase": "Retainer", "duration": "Monthly", "what": "Conversation review, price and hours updates, and a monthly count of calls, bookings and handovers." }
+    ],
+    "beforeAfter": [
+      { "measure": "Calls during the morning rush", "before": "Often went to voicemail", "after": "Answered on the second ring" },
+      { "measure": "WhatsApp replies", "before": "When someone was free", "after": "Within a minute" },
+      { "measure": "Reminders", "before": "Sent by hand, skipped when busy", "after": "Sent every time, twice" },
+      { "measure": "Out of hours", "before": "Voicemail", "after": "Booked, or given the emergency line" }
+    ],
+    "screens": [
+      {
+        "kind": "chat",
+        "frame": "phone",
+        "caption": "A check-up moved on WhatsApp at ten at night.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "title": "Practice reception",
+        "subtitle": "WhatsApp",
+        "messages": [
+          { "from": "them", "text": "Hi, I can't make my check-up on Thursday. Can I move it?", "time": "22:04" },
+          { "from": "us", "text": "Of course, Hannah. I have Tuesday at 8:40 or Friday at 15:20 with Dr Shah. Which would you like?", "time": "22:04" },
+          { "from": "them", "text": "Friday please", "time": "22:06" },
+          { "from": "us", "text": "Done. Friday at 15:20 with Dr Shah. I will remind you on Wednesday.", "time": "22:06" }
+        ]
+      },
+      {
+        "kind": "dashboard",
+        "frame": "browser",
+        "address": "reception report / this week",
+        "caption": "The weekly summary the practice manager receives on Monday morning.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "stats": [
+          { "label": "Calls answered", "value": "212" },
+          { "label": "Appointments booked", "value": "58" },
+          { "label": "Passed to staff", "value": "17" }
+        ],
+        "barsTitle": "Calls answered by day",
+        "bars": [
+          { "label": "Mon", "value": 52 },
+          { "label": "Tue", "value": 41 },
+          { "label": "Wed", "value": 37 },
+          { "label": "Thu", "value": 44 },
+          { "label": "Fri", "value": 38 }
+        ]
+      },
+      {
+        "kind": "runlog",
+        "frame": "browser",
+        "address": "call log / urgent handover",
+        "caption": "An urgent call. The receptionist does not advise, it hands over.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "title": "A call about tooth pain",
+        "events": [
+          { "time": "11:12", "who": "customer", "text": "Patient calls and describes swelling since last night." },
+          { "time": "11:12", "who": "ai", "text": "Recognised as urgent. Tells the patient a team member will call back within 15 minutes." },
+          { "time": "11:13", "who": "system", "text": "Front desk alerted with the patient's name, number and words." },
+          { "time": "11:21", "who": "team", "text": "Receptionist calls back and books an emergency slot at 14:00." }
+        ],
+        "footer": "Call to callback: 9 minutes"
+      }
+    ],
+    "quote": {
+      "quote": "The phone used to ring out while we were checking someone in, and we would find the voicemails at lunch. Now the diary fills itself overnight and we deal with the people standing in front of us.",
+      "name": "Priya Nair",
+      "role": "Practice manager",
+      "company": "Dental practice, Manchester",
+      "industry": "clinics-dental",
+      "sample": true
+    },
+    "costs": {
+      "currency": "£",
+      "setupFee": 3600,
+      "retainer": 1400,
+      "monthlyValue": 3250,
+      "valueBasis": "15 kept appointments a month at an average of £180, plus 39 front desk hours at £14"
+    }
+  },
+  {
+    "slug": "sales-call-notes-and-follow-ups-written-for-the-rep",
+    "title": "Call notes, CRM updates and follow-ups, written for the rep",
+    "metaDescription": "Sample case study: a nine-person Sydney B2B sales team gets call notes, CRM updates and follow-up drafts written within minutes of every customer meeting.",
+    "clientType": "9-person B2B sales team at a software reseller, Sydney",
+    "industry": "agencies-sales-teams",
+    "services": ["meeting-intelligence", "workflow-automation"],
+    "region": "Australia",
+    "teamSize": "7 reps, 1 sales manager, 1 operations lead",
+    "duration": "7 weeks from audit to full rollout",
+    "featured": false,
+    "sample": true,
+    "summary": "Reps were writing up calls at night or not at all, so the CRM was out of date and follow-ups slipped. Now the notes, the CRM fields and a draft follow-up are ready within minutes of the call ending.",
+    "results": [
+      { "label": "Follow-up draft ready", "value": "12 min", "note": "After the call ends. Was next day" },
+      { "label": "Admin time back per rep", "value": "3 hrs/week" },
+      { "label": "Calls with notes in the CRM", "value": "96%", "note": "Was about half" },
+      { "label": "Deals with a next step logged", "value": "9 in 10" }
+    ],
+    "problem": [
+      "Each rep ran four to six customer calls a day. Notes lived in notebooks, in personal documents, or in the rep's head.",
+      "The sales manager could not trust the pipeline report, because half the deals had no recent notes and no next step.",
+      "Follow-up emails went out the next day at best. Customers who had been keen on the call had cooled by the time the summary arrived."
+    ],
+    "solution": {
+      "paragraphs": [
+        "Calls are recorded with the customer's consent, transcribed, and turned into a short structured note: what was discussed, objections, budget, who decides, and the agreed next step.",
+        "The note is filed against the right deal in the CRM and the deal fields are updated. A follow-up email is drafted in the rep's own style and left in their drafts folder. Nothing is sent to a customer without the rep reading it first."
+      ],
+      "automations": [
+        { "name": "Call notes", "what": "A one-page summary of each call, in the same five headings every time." },
+        { "name": "CRM update", "what": "Stage, budget, decision maker and next step filled in on the deal record." },
+        { "name": "Follow-up draft", "what": "An email in the rep's tone, with the agreed actions and dates, waiting in drafts." },
+        { "name": "Manager digest", "what": "A Friday summary of every deal that moved, stalled or has no next step." }
+      ],
+      "flow": {
+        "title": "From the end of a call to the follow-up",
+        "nodes": [
+          { "icon": "mic", "label": "Call ends", "sub": "Recorded with consent" },
+          { "icon": "file-text", "label": "Notes written", "sub": "Five fixed headings" },
+          { "icon": "database", "label": "CRM updated", "sub": "Stage and next step" },
+          { "icon": "mail", "label": "Follow-up drafted", "sub": "Rep reads, then sends" }
+        ]
+      }
+    },
+    "stack": ["Meeting recorder", "Claude API", "n8n", "The team's existing CRM", "Email"],
+    "timeline": [
+      { "phase": "Audit", "duration": "1 week", "what": "Sat in on a day of calls with two reps and compared what was said with what reached the CRM." },
+      { "phase": "Pilot", "duration": "2 weeks", "what": "Two reps, notes only. They marked each note as right, close or wrong, and the format was tuned." },
+      { "phase": "Build", "duration": "4 weeks", "what": "CRM field updates, follow-up drafts for all seven reps, and the Friday digest for the manager." },
+      { "phase": "Retainer", "duration": "Monthly", "what": "Note quality checked on a sample of calls, new products added to the vocabulary, CRM changes tracked." }
+    ],
+    "beforeAfter": [
+      { "measure": "Writing up a call", "before": "15 to 20 minutes, often at night", "after": "A 2-minute read and correct" },
+      { "measure": "Follow-up email", "before": "Next day, sometimes never", "after": "Draft ready in 12 minutes" },
+      { "measure": "Pipeline report", "before": "Half the deals had stale notes", "after": "Notes on 96% of calls" },
+      { "measure": "Friday pipeline meeting", "before": "90 minutes of status updates", "after": "40 minutes on stalled deals only" }
+    ],
+    "screens": [
+      {
+        "kind": "runlog",
+        "frame": "browser",
+        "address": "automation log / call 4,402",
+        "caption": "One discovery call, from hanging up to a follow-up in drafts.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "title": "After a 35-minute discovery call",
+        "events": [
+          { "time": "14:35", "who": "team", "text": "Call ends." },
+          { "time": "14:39", "who": "ai", "text": "Transcript ready. Notes written under five headings." },
+          { "time": "14:41", "who": "system", "text": "Deal moved to Proposal. Budget and decision maker filled in." },
+          { "time": "14:47", "who": "ai", "text": "Follow-up drafted with two agreed actions and dates." },
+          { "time": "15:02", "who": "team", "text": "Rep edits one line and sends." }
+        ],
+        "footer": "Call end to draft: 12 minutes"
+      },
+      {
+        "kind": "ledger",
+        "frame": "browser",
+        "address": "team report / hours",
+        "caption": "One rep's weekly admin, before and after. Illustrative hours.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "ledgerCaption": "One rep's week of admin",
+        "rows": [
+          { "label": "Typing up call notes", "value": "25 min", "note": "Was 2 hrs 10 min" },
+          { "label": "Updating the CRM", "value": "15 min", "note": "Was 55 min" },
+          { "label": "Writing follow-ups", "value": "35 min", "note": "Was 1 hr 10 min" }
+        ],
+        "total": { "label": "Time back each week", "value": "3 hrs" }
+      },
+      {
+        "kind": "table",
+        "frame": "browser",
+        "address": "crm / open deals",
+        "caption": "The pipeline view the manager opens on Friday. Next steps are filled in from the calls.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "columns": ["Deal", "Stage", "Next step", "Notes"],
+        "rows": [
+          ["Freight firm, 40 seats", "Proposal", "Send pricing by Wed", { "pill": "Updated today", "tone": "good" }],
+          ["Wholesaler, 15 seats", "Discovery", "Demo on 14th", { "pill": "Updated today", "tone": "good" }],
+          ["Builder, 25 seats", "Negotiation", "Legal review", { "pill": "2 days ago", "tone": "plain" }],
+          ["Clinic group, 60 seats", "Discovery", "None logged", { "pill": "Needs a next step", "tone": "warn" }]
+        ]
+      }
+    ],
+    "quote": {
+      "quote": "My reps stopped doing notes at nine at night. The Friday pipeline meeting went from an hour and a half of asking what happened to forty minutes on the deals that are stuck.",
+      "name": "Tom Halloran",
+      "role": "Sales manager",
+      "company": "B2B software reseller, Sydney",
+      "industry": "agencies-sales-teams",
+      "sample": true
+    },
+    "costs": {
+      "currency": "A$",
+      "setupFee": 5200,
+      "retainer": 1500,
+      "monthlyValue": 5000,
+      "valueBasis": "About 91 rep hours a month at A$55 an hour"
+    }
+  },
+  {
+    "slug": "supplier-invoices-matched-to-bank-lines",
+    "title": "Invoices matched to bank lines, with only the exceptions left",
+    "metaDescription": "Sample case study: an eight-person Dubai bookkeeping firm has supplier invoices read and matched to bank lines automatically, leaving people only the exceptions.",
+    "clientType": "8-person bookkeeping firm, Dubai",
+    "industry": "bookkeeping",
+    "services": ["workflow-automation", "ai-audit"],
+    "region": "UAE",
+    "teamSize": "6 bookkeepers, 2 partners",
+    "duration": "10 weeks from audit to full rollout",
+    "featured": false,
+    "sample": true,
+    "summary": "Bookkeepers spent the first week of every month keying in supplier invoices and ticking them off against bank statements. Now invoices are read and matched automatically, and people only see the ones that do not add up.",
+    "results": [
+      { "label": "Invoices matched without a person", "value": "82%" },
+      { "label": "Month-end close", "value": "4 days", "note": "Was 9 working days" },
+      { "label": "Data entry time back", "value": "62 hrs/month", "note": "Across six bookkeepers" },
+      { "label": "Exceptions cleared the same day", "value": "9 in 10" }
+    ],
+    "problem": [
+      "The firm looked after the books of about 45 small businesses. Supplier invoices arrived as email attachments, phone photos and the occasional scan.",
+      "Each one was typed into the accounting software, then matched by eye to a line on the bank statement. It was careful work, and nearly all of it was routine.",
+      "The partners wanted month-end done faster without hiring, and they wanted a person to check anything unusual rather than everything."
+    ],
+    "solution": {
+      "paragraphs": [
+        "The audit showed that four in five invoices were plain: one supplier, one amount, one matching bank line. Those are now read, coded and matched without anyone touching them.",
+        "Anything else goes to an exceptions queue with the reason spelled out: amount differs, possible duplicate, supplier not recognised, or VAT number missing. A bookkeeper decides, and the rule is updated if the same case keeps appearing.",
+        "Every automatic match keeps a link to the original document, so a partner can check any entry in two clicks."
+      ],
+      "automations": [
+        { "name": "Invoice capture", "what": "Attachments and photos sent to one inbox are read and turned into supplier, date, amount and VAT." },
+        { "name": "Bank line matching", "what": "Each invoice is matched to its payment by amount, date and supplier reference." },
+        { "name": "Exceptions queue", "what": "Anything that does not match cleanly is listed with the reason and a suggested fix." },
+        { "name": "Missing document chaser", "what": "Clients get a weekly message listing payments that still have no invoice." }
+      ],
+      "flow": {
+        "title": "What happens to a supplier invoice",
+        "nodes": [
+          { "icon": "mail", "label": "Invoice arrives", "sub": "Email, photo or scan" },
+          { "icon": "scan-line", "label": "Details read", "sub": "Supplier, amount, VAT" },
+          { "icon": "banknote", "label": "Matched to bank", "sub": "Amount, date, reference" },
+          { "icon": "filter", "label": "Exceptions only", "sub": "With the reason shown" },
+          { "icon": "user-check", "label": "Bookkeeper decides", "sub": "Rule updated if needed" }
+        ]
+      }
+    },
+    "stack": ["Make", "Claude API", "Shared invoice inbox", "The firm's existing accounting software", "Shared drive"],
+    "timeline": [
+      { "phase": "Audit", "duration": "2 weeks", "what": "Sorted three months of invoices for five clients into plain and awkward, and costed the hours spent on each." },
+      { "phase": "Pilot", "duration": "4 weeks", "what": "Five clients, one bookkeeper. Every automatic match was double-checked by hand for a full month-end." },
+      { "phase": "Build", "duration": "4 weeks", "what": "All 45 clients, the exceptions queue, the document chaser and the partner spot-check view." },
+      { "phase": "Retainer", "duration": "Monthly", "what": "Matching rules tuned from the exceptions, new suppliers added, and a monthly accuracy sample for the partners." }
+    ],
+    "beforeAfter": [
+      { "measure": "Entering a supplier invoice", "before": "Typed in by hand", "after": "Read automatically, checked on exception" },
+      { "measure": "Matching to the bank", "before": "By eye, line by line", "after": "82% matched without a person" },
+      { "measure": "Month-end close", "before": "9 working days", "after": "4 working days" },
+      { "measure": "Missing invoices", "before": "Chased by phone at month-end", "after": "Clients reminded every week" }
+    ],
+    "screens": [
+      {
+        "kind": "table",
+        "frame": "browser",
+        "address": "matching / exceptions",
+        "caption": "The exceptions queue. This is the only list a bookkeeper has to work through.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "columns": ["Supplier", "Invoice", "Bank line", "Reason"],
+        "rows": [
+          ["Office supplies co.", "AED 1,240.00", "AED 1,204.00", { "pill": "Amount differs", "tone": "warn" }],
+          ["Courier firm", "AED 385.50", "AED 385.50", { "pill": "Possible duplicate", "tone": "warn" }],
+          ["Unknown sender", "AED 2,900.00", "No match", { "pill": "New supplier", "tone": "plain" }],
+          ["Print shop", "AED 610.00", "AED 610.00", { "pill": "VAT number missing", "tone": "plain" }]
+        ]
+      },
+      {
+        "kind": "ledger",
+        "frame": "browser",
+        "address": "matching / this month",
+        "caption": "The month's run for all clients. Figures are illustrative.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "ledgerCaption": "Invoices this month",
+        "rows": [
+          { "label": "Received", "value": "1,930" },
+          { "label": "Matched without a person", "value": "1,583" },
+          { "label": "Sent to the exceptions queue", "value": "347" },
+          { "label": "Exceptions still open", "value": "21" }
+        ],
+        "total": { "label": "Matched automatically", "value": "82%" }
+      },
+      {
+        "kind": "dashboard",
+        "frame": "browser",
+        "address": "partner view / close progress",
+        "caption": "The partner view on working day four, by bookkeeper.",
+        "ownerNote": "TODO: replace with real screenshots",
+        "stats": [
+          { "label": "Clients closed", "value": "39 of 45" },
+          { "label": "Open exceptions", "value": "21" },
+          { "label": "Documents chased", "value": "64" }
+        ],
+        "barsTitle": "Clients closed, by bookkeeper",
+        "bars": [
+          { "label": "A", "value": 8 },
+          { "label": "B", "value": 7 },
+          { "label": "C", "value": 7 },
+          { "label": "D", "value": 6 },
+          { "label": "E", "value": 6 },
+          { "label": "F", "value": 5 }
+        ]
+      }
+    ],
+    "quote": {
+      "quote": "We were nervous about a machine touching client books. What settled it was the exceptions list. My team checks the 300 odd invoices that look wrong and no longer types in the 1,600 that are fine.",
+      "name": "Layla Haddad",
+      "role": "Managing partner",
+      "company": "Bookkeeping firm, Dubai",
+      "industry": "bookkeeping",
+      "sample": true
+    },
+    "costs": {
+      "currency": "AED ",
+      "setupFee": 18000,
+      "retainer": 4500,
+      "monthlyValue": 9300,
+      "valueBasis": "62 bookkeeper hours a month at AED 150 an hour"
+    }
+  }
+]

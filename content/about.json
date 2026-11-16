@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "About",
+    "description": "Veeboo AI is one technical founder in India who audits, builds and runs AI automations for small businesses. You own every account and can leave any month."
+  },
+  "hero": {
+    "title": "One person builds it, and the same person picks up when you call",
+    "lede": "Veeboo AI is a one-person studio. I audit the process, build the automation and keep it running. No account managers and no handing your project to someone you have never met."
+  },
+  "story": {
+    "title": "Who you would be working with",
+    "photo": {
+      "src": "/assets/img/founder-placeholder.svg",
+      "alt": "Placeholder for a photo of Aditya, founder of Veeboo AI",
+      "note": "TODO: real photo"
+    },
+    "caption": "Aditya, founder. Based in India.",
+    "paragraphs": [
+      "I'm Aditya. I run Veeboo AI on my own, from India. I take the audit call, map the process, build the automation, test it against your real cases, and I am the one who gets the alert if something stops working.",
+      "TODO: add two or three sentences of real background here. What you built or worked on before Veeboo AI, and anything a client could check. Facts only, no rounding up.",
+      "I work with small businesses, usually 5 to 50 people, in the US, the UK, the UAE and Australia. At that size nobody has a spare person to babysit software. So I build things an office manager can understand: a short written description of every step, and a plain alert when the automation is unsure and needs a person.",
+      "TODO: add one or two sentences on why you started Veeboo AI, in your own words. The problem or moment that made you start.",
+      "I would rather build one small thing that pays for itself than sell you a big plan. That is why every project starts with a single narrow workflow and a number we both agree to watch."
+    ]
+  },
+  "why": {
+    "title": "Why work with a one-person studio",
+    "lede": "Four things are different from hiring a larger agency. Here is how each one works in practice.",
+    "items": [
+      {
+        "title": "One person does the work",
+        "text": "You talk to the person who builds it. The questions you ask on a call are answered by someone who has your workflow open on the other screen.",
+        "points": [
+          "Your audit call, build and support are all with Aditya",
+          "One shared channel, on email, WhatsApp or Slack, whichever you already use",
+          "Honest limit: one person means a small number of clients at a time, and a start date rather than a start tomorrow"
+        ]
+      },
+      {
+        "title": "Fast delivery",
+        "text": "The pilot is one narrow workflow, live in 2 to 4 weeks. It runs on your real enquiries, calls or invoices, not a demo.",
+        "points": [
+          "Week one: access, sample data and a written map of the process",
+          "Then a working version you can test, with changes made as you use it",
+          "The 2 to 4 weeks depends on getting access to your tools in the first few days"
+        ]
+      },
+      {
+        "title": "You own all accounts",
+        "text": "Everything is built inside your own n8n, Make or Zapier workspace, your own CRM and your own API accounts. I am invited in as a user, and you can remove me.",
+        "points": [
+          "Subscriptions and API usage are billed to you directly, at cost, with no markup",
+          "No shared passwords: access is by invitation, with its own login",
+          "Your customer data stays in the tools you already chose"
+        ]
+      },
+      {
+        "title": "No lock-in",
+        "text": "The retainer is month to month. If you stop, the automations keep running in your accounts and you keep everything needed to run or change them.",
+        "points": [
+          "A full handover document: what each workflow does, where it lives and how to fix the common faults",
+          "Workflows are exportable, so another builder or your own staff can take over",
+          "Cancel the retainer with a month's notice, in one email"
+        ]
+      }
+    ]
+  },
+  "timezones": {
+    "title": "How we work across time zones",
+    "lede": "Most of the work does not need both of us awake. I build during the Indian day, you find an update when you start yours, and we keep a few live hours each week for calls.",
+    "columns": {
+      "region": "Where you are",
+      "overlap": "Live overlap, your time",
+      "india": "Same hours in India",
+      "use": "What we use it for"
+    },
+    "rows": [
+      {
+        "region": "US, East Coast",
+        "overlap": "8:00 to 11:00 am ET",
+        "india": "6:30 to 9:30 pm IST",
+        "use": "Calls at the start of your day",
+        "flag": "TODO: confirm"
+      },
+      {
+        "region": "US, West Coast",
+        "overlap": "8:00 to 10:00 am PT",
+        "india": "9:30 to 11:30 pm IST",
+        "use": "A weekly call, the rest in writing",
+        "flag": "TODO: confirm"
+      },
+      {
+        "region": "UK",
+        "overlap": "9:00 am to 2:00 pm",
+        "india": "2:30 to 7:30 pm IST",
+        "use": "Calls most of your morning",
+        "flag": "TODO: confirm"
+      },
+      {
+        "region": "UAE",
+        "overlap": "9:00 am to 5:00 pm",
+        "india": "10:30 am to 6:30 pm IST",
+        "use": "Close to a shared working day",
+        "flag": "TODO: confirm"
+      },
+      {
+        "region": "Australia, east coast",
+        "overlap": "1:00 to 5:00 pm",
+        "india": "7:30 to 11:30 am IST",
+        "use": "Calls in your afternoon",
+        "flag": "TODO: confirm"
+      }
+    ],
+    "note": "TODO: confirm these hours against your real working day before launch. They are worked out for winter clocks and move by an hour when daylight saving changes.",
+    "habitsTitle": "What fills the hours in between",
+    "habits": [
+      "A written update at the end of each working day during a build: what changed, what is next, what I need from you",
+      "Short screen recordings instead of meetings, so you can watch at your own time",
+      "Alerts from live automations go to you and to me, so a fault is seen in whichever time zone is awake",
+      "Urgent faults on a live automation are answered the same day. TODO: confirm the response time you will commit to"
+    ]
+  },
+  "process": {
+    "title": "The same four steps every time",
+    "lede": "You can stop after any step and keep what has been made so far.",
+    "steps": [
+      {
+        "title": "Audit",
+        "text": "A free 30-minute call about one slow, repetitive process. You get a written plan with the cost, the expected return and what could go wrong.",
+        "meta": "30 minutes, free"
+      },
+      {
+        "title": "Pilot",
+        "text": "One narrow workflow built in your accounts and run on real work, with a number we agreed to watch.",
+        "meta": "Live in 2 to 4 weeks"
+      },
+      {
+        "title": "Build",
+        "text": "If the pilot earns its keep, we widen it: more cases, more tools connected, proper alerts and a handover document.",
+        "meta": "Scoped and priced before it starts"
+      },
+      {
+        "title": "Retainer",
+        "text": "Monitoring, fixes when a tool changes, and small improvements each month. You get a short monthly report of what ran and what it saved.",
+        "meta": "Month to month"
+      }
+    ]
+  },
+  "limits": {
+    "title": "What we say no to",
+    "lede": "It is cheaper for both of us to find this out now.",
+    "items": [
+      {
+        "title": "Work that happens a few times a month",
+        "text": "If a task takes an hour a week, the setup fee will take years to earn back. I will tell you that on the audit call."
+      },
+      {
+        "title": "Decisions that need a licensed professional",
+        "text": "An automation can collect details, book the appointment and send reminders. It should not diagnose a patient, give legal or tax advice, or approve a payment on its own."
+      },
+      {
+        "title": "Cold outreach at volume",
+        "text": "No scraped lists, no mass unsolicited WhatsApp or email. It gets accounts banned and it is not the kind of work I want my name on."
+      },
+      {
+        "title": "Projects that need a team on call around the clock",
+        "text": "One person cannot promise a 15-minute response at 3 am. If your process needs that, you need a larger provider, and I will say so."
+      },
+      {
+        "title": "Building inside accounts you do not own",
+        "text": "If the plan only works when everything sits in my accounts, I will not build it. Ownership by the client is the whole arrangement."
+      },
+      {
+        "title": "A process nobody can describe yet",
+        "text": "If the steps change every time, automating it locks in the mess. We write the process down first, and sometimes that alone fixes it."
+      }
+    ]
+  },
+  "tools": {
+    "title": "Tools we build with",
+    "lede": "Chosen for one reason: a small business can own them, pay for them directly and find another person who knows them.",
+    "groups": [
+      { "label": "Workflow tools", "items": "n8n, Make and Zapier. Whichever you already pay for comes first." },
+      { "label": "AI models", "items": "The OpenAI API and the Claude API, called from your own API account so usage is billed to you at cost." },
+      { "label": "Voice and messaging", "items": "Voice AI for phone lines and the WhatsApp Business API for messaging, set up under your business's own number." },
+      { "label": "Your existing systems", "items": "Your CRM, calendar, phone system, inbox and accounting software. The automation fits around them, not the other way round." }
+    ],
+    "disclaimer": "All product names are trademarks of their owners. Veeboo AI is an independent studio and is not affiliated with, partnered with or endorsed by any of these companies."
+  },
+  "jsonLd": {
+    "jobTitle": "Founder",
+    "country": "IN"
+  }
+}

@@ -1,0 +1,570 @@
+[
+  {
+    "slug": "real-estate",
+    "name": "Real estate teams",
+    "icon": "house",
+    "photo": "industry-real-estate",
+    "short": "Every new lead answered in under a minute, qualified, and booked for a viewing or call.",
+    "title": "AI automation for real estate teams",
+    "description": "Done-for-you AI automations for real estate teams: portal and website leads answered in about a minute, qualified, and booked for a viewing or a call.",
+    "linkLabel": "See the real estate page",
+    "headline": "A lead that arrives at 11pm should not wait until 9am",
+    "lede": "We set up an assistant that replies to every portal, website and WhatsApp enquiry in about a minute, asks the questions your ISA would ask, and puts the viewing in an agent's calendar. Your agents start the day with booked appointments, not a list of people to chase.",
+    "hero": {
+      "type": "runlog",
+      "title": "Tuesday night, a portal enquiry",
+      "events": [
+        { "time": "23:42", "who": "customer", "text": "A buyer asks about a three-bed listing through a property portal." },
+        { "time": "23:42", "who": "ai", "text": "Replies by text and email: the home is available. Asks about budget, timing and financing." },
+        { "time": "23:43", "who": "customer", "text": "Buyer answers: pre-approved, wants to move within three months." },
+        { "time": "23:43", "who": "ai", "text": "Offers two slots from the listing agent's calendar. Buyer picks Thursday, 5:30pm." },
+        { "time": "23:43", "who": "system", "text": "Lead, answers and viewing saved to the CRM. Agent notified." },
+        { "time": "08:30", "who": "team", "text": "Agent reads the summary over coffee and confirms the viewing by phone." }
+      ],
+      "footer": "Enquiry to booked viewing: about a minute"
+    },
+    "pains": {
+      "lede": "None of this is hard work. It is work that arrives at the wrong time.",
+      "items": [
+        { "title": "Portal leads go cold overnight", "text": "Enquiries from listing portals arrive in the evening and at weekends. By the time someone replies the next morning, the buyer has often messaged other agents." },
+        { "title": "Agents qualify by hand", "text": "Every new lead means the same questions about budget, timing, area and financing, typed out between viewings." },
+        { "title": "Viewings booked by back-and-forth", "text": "Finding a slot takes several messages, and the no-shows are the ones nobody reminded." },
+        { "title": "The CRM is a week behind", "text": "Notes live in phones and inboxes, so the Monday pipeline meeting runs on memory." }
+      ]
+    },
+    "automations": {
+      "lede": "Each one is a separate piece. Start with the first, add the others when it has earned its keep.",
+      "flow": {
+        "title": "Main workflow: new enquiry to booked viewing",
+        "nodes": [
+          { "icon": "inbox", "label": "New enquiry", "sub": "Portal, website, WhatsApp" },
+          { "icon": "message-circle", "label": "Reply in about a minute", "sub": "Text, email or WhatsApp" },
+          { "icon": "filter", "label": "Qualify", "sub": "Budget, timing, financing" },
+          { "icon": "calendar-check", "label": "Book the viewing", "sub": "From the agent's calendar" },
+          { "icon": "database", "label": "Update the CRM", "sub": "Agent notified" }
+        ]
+      },
+      "items": [
+        {
+          "name": "Instant lead reply",
+          "trigger": "A new enquiry from a listing portal, your website form, WhatsApp or a missed call.",
+          "does": "Replies in about a minute by text, email or WhatsApp, in your team's tone, with the details of the listing they asked about.",
+          "person": "Nothing, unless the buyer asks for a person. Then it hands over with the conversation attached."
+        },
+        {
+          "name": "Lead qualification",
+          "trigger": "The buyer or seller replies.",
+          "does": "Asks the questions your ISA would ask: budget, timing, area, financing, whether they have a home to sell. Writes a short summary and a priority.",
+          "person": "Agents read the summary and decide who to call first."
+        },
+        {
+          "name": "Viewing booking and reminders",
+          "trigger": "A qualified lead wants to see a property.",
+          "does": "Offers free slots from the agent's calendar, books the viewing, and sends a reminder the day before and an hour before.",
+          "person": "The agent shows the home."
+        },
+        {
+          "name": "CRM logging and lead routing",
+          "trigger": "Any new lead or booked viewing.",
+          "does": "Creates or updates the contact, attaches the conversation, and assigns the lead by area, price band or round-robin.",
+          "person": "The team lead sets the routing rules and can change them at any time."
+        },
+        {
+          "name": "Long-term follow-up",
+          "trigger": "A lead says not yet, or goes quiet.",
+          "does": "Checks in on a schedule you approve, with new listings that match what they asked for.",
+          "person": "An agent picks up as soon as the lead replies."
+        }
+      ]
+    },
+    "worth": {
+      "lede": "A worked example for a small brokerage. Swap in your own lead volume and commission and the sum changes with them.",
+      "assumptions": [
+        "40 new leads a month from portals and your website",
+        "15 minutes of agent time per lead today on the first reply and the basic questions",
+        "Agent time costed at $40 an hour",
+        "One extra deal a quarter from leads that used to go unanswered overnight",
+        "An average commission to the brokerage of $6,000"
+      ],
+      "ledger": {
+        "sample": true,
+        "caption": "Illustrative month, 40 new leads",
+        "rows": [
+          { "label": "Agent time on first replies today", "note": "40 leads at 15 minutes", "value": "10 h" },
+          { "label": "That time, valued at $40 an hour", "value": "+$400" },
+          { "label": "One extra deal a quarter", "note": "$6,000 commission, spread over three months", "value": "+$2,000" },
+          { "label": "Monthly retainer", "note": "Monitoring, fixes and changes", "value": "−$900" }
+        ],
+        "total": { "label": "Illustrative net per month", "value": "$1,500" }
+      },
+      "setupNote": "One-off setup in this example: $3,500, covered in the third month."
+    },
+    "tools": {
+      "groups": [
+        { "label": "CRM", "text": "Works with CRMs such as Follow Up Boss, kvCORE, HubSpot and Pipedrive, or the one you already use if it has an API or a Zapier connection." },
+        { "label": "Lead sources", "text": "Listing portals that send leads by email or feed, your website forms, and lead ads on Facebook and Instagram." },
+        { "label": "Messaging and calendar", "text": "SMS, email, WhatsApp Business API, Google Calendar and Outlook." },
+        { "label": "Built on", "text": "n8n, Make or Zapier for the workflow, with the OpenAI API or Claude API for the conversation." }
+      ]
+    },
+    "trust": {
+      "ownerNote": "TODO: confirm your compliance position for real estate: consent wording for SMS and calls (TCPA in the US, PECR in the UK), a fair housing review of the qualifying script, and any licensing rules on who may answer listing questions.",
+      "items": [
+        { "title": "It says it is an assistant", "text": "Messages make clear the buyer is talking to an automated assistant for your team, and offer a person at any point." },
+        { "title": "It stays inside the listing", "text": "The assistant answers from your listing data and the rules you set. It does not negotiate, quote a price that is not on the listing, or give legal or mortgage advice." },
+        { "title": "Fair housing and local rules", "text": "Qualifying questions are written with you and limited to budget, timing and property needs. You review the script against the fair housing and advertising rules that apply where you work before it goes live." },
+        { "title": "Consent for texts and calls", "text": "Rules on texting and calling leads differ by country and state. We build in opt-out handling and quiet hours, and you confirm the consent wording for your market." },
+        { "title": "You own the accounts", "text": "The CRM, phone number, WhatsApp account and workflow accounts are in your name. If we stop working together, everything keeps running." }
+      ]
+    },
+    "faq": {
+      "items": [
+        { "q": "Will buyers know they are talking to an AI?", "a": "Yes. The first message says it is the team's assistant, and anyone can ask for a person. Late at night, a clear answer and a time slot is usually what the enquiry was for." },
+        { "q": "What happens when a lead asks something it cannot answer?", "a": "It says so, takes the question, and passes the conversation to the right agent with a summary. It does not guess at prices, offers or legal points." },
+        { "q": "We already have an ISA. Does this replace them?", "a": "No. It covers the hours and the volume a person cannot, and does the first reply and the basic questions. Your ISA spends their time on the calls that need a person." },
+        { "q": "Does it work with our CRM and portals?", "a": "If your CRM has an API, a Zapier or Make connection, or can receive email, almost certainly. Portal leads usually arrive by email or a feed, which is enough. We check your exact setup in the audit before quoting." },
+        { "q": "How long before it is live?", "a": "A first pilot, usually instant reply and qualification for one lead source, takes two to four weeks including a test period on real enquiries." }
+      ]
+    },
+    "pilot": {
+      "lede": "Start with the one lead source that loses the most enquiries. Prove it on real leads, then decide whether to add the rest.",
+      "scope": [
+        "Instant reply and qualification for one lead source, such as your main portal or website form",
+        "Viewing booking into one shared calendar or one per agent",
+        "Every conversation logged to your CRM with a summary",
+        "A weekly report: leads answered, qualified, booked and handed to a person"
+      ],
+      "timeline": [
+        { "when": "Week 1", "text": "Access, your qualifying questions, reply wording and routing rules agreed." },
+        { "when": "Week 2", "text": "Built and tested on past enquiries. Your team tries to break it." },
+        { "when": "Weeks 3 to 4", "text": "Live on real leads with daily checks, then a review of the numbers together." }
+      ]
+    }
+  },
+  {
+    "slug": "clinics-dental",
+    "name": "Clinics and dental practices",
+    "icon": "stethoscope",
+    "photo": "industry-clinics-dental",
+    "short": "An AI receptionist on WhatsApp and the phone, with reminders that cut no-shows.",
+    "title": "AI receptionist for clinics and dental practices",
+    "description": "An AI receptionist for clinics and dental practices: bookings on WhatsApp and the phone, appointment reminders, patient recall, and urgent cases passed to staff.",
+    "linkLabel": "See the clinics and dental page",
+    "headline": "The phone rings while your front desk is with a patient",
+    "lede": "We set up a receptionist on WhatsApp and the phone that books, reschedules and reminds, day and night. Hygiene recalls go out on time, gaps in the diary are offered to the waiting list, and anything clinical or urgent goes straight to your team.",
+    "hero": {
+      "type": "chat",
+      "title": "Your practice on WhatsApp",
+      "subtitle": "Automated booking assistant",
+      "messages": [
+        { "from": "them", "text": "Hi, I need a check-up and a clean. Anything next week?", "time": "19:12" },
+        { "from": "us", "text": "Hello, this is the practice's booking assistant. For a check-up with a hygiene appointment I have Tuesday at 8:30am or Thursday at 4:15pm. Which suits you?", "time": "19:12" },
+        { "from": "them", "text": "Thursday please", "time": "19:13" },
+        { "from": "us", "text": "Booked: Thursday, 4:15pm, check-up and hygiene. I will remind you the day before.", "time": "19:13" },
+        { "from": "us", "text": "Reminder: your appointment is tomorrow at 4:15pm. Reply 1 to confirm or 2 to change it.", "time": "Wed 10:00" },
+        { "from": "them", "text": "1", "time": "Wed 10:04" },
+        { "from": "us", "text": "Confirmed. See you tomorrow.", "time": "Wed 10:04" }
+      ]
+    },
+    "pains": {
+      "lede": "A front desk has one pair of hands. These are the jobs that lose out.",
+      "items": [
+        { "title": "Calls go unanswered at the busiest times", "text": "The front desk is checking a patient in, taking a payment and answering the phone at once. A caller who gets voicemail may simply book somewhere else." },
+        { "title": "Reminders are done by hand, or not at all", "text": "Someone works through tomorrow's list by phone when there is a quiet half hour. On a busy day there is none, and the no-shows follow." },
+        { "title": "Recalls slip", "text": "Patients due a check-up or hygiene appointment sit in a report nobody has time to work through." },
+        { "title": "Cancellations leave gaps", "text": "A late cancellation leaves an empty chair, even though there are patients who wanted an earlier slot." }
+      ]
+    },
+    "automations": {
+      "lede": "You can start with reminders and recalls only, and add booking once you trust it.",
+      "flow": {
+        "title": "Main workflow: message to confirmed appointment",
+        "nodes": [
+          { "icon": "message-circle", "label": "Patient gets in touch", "sub": "WhatsApp or phone" },
+          { "icon": "bot", "label": "Assistant answers", "sub": "Urgent words go to staff" },
+          { "icon": "calendar-check", "label": "Books the slot", "sub": "In your practice system" },
+          { "icon": "bell", "label": "Reminds and confirms", "sub": "Two days and two hours before" },
+          { "icon": "user-check", "label": "Front desk sees the day", "sub": "Only exceptions to call" }
+        ]
+      },
+      "items": [
+        {
+          "name": "WhatsApp and phone booking",
+          "trigger": "A patient messages or calls, at any hour.",
+          "does": "Answers, finds a slot in your practice management system for the right appointment type and clinician, books it and confirms in writing.",
+          "person": "The front desk handles anything unusual. Clinical questions and complaints go to them with the conversation attached."
+        },
+        {
+          "name": "Appointment reminders",
+          "trigger": "A set time before each appointment, such as two days and two hours.",
+          "does": "Sends a reminder with a one-tap confirm or reschedule. Unconfirmed appointments are flagged for a call.",
+          "person": "Staff call only the patients who did not confirm."
+        },
+        {
+          "name": "Patient recall",
+          "trigger": "A patient becomes due for a check-up, hygiene appointment or review.",
+          "does": "Sends a recall message with available slots, follows up on a schedule you set, and books the reply.",
+          "person": "You set who is recalled and when. The assistant never changes a recall interval a clinician has set."
+        },
+        {
+          "name": "Cancellation and waiting-list fill",
+          "trigger": "An appointment is cancelled or moved.",
+          "does": "Offers the freed slot to patients on the waiting list who wanted that kind of appointment. The first to reply gets it.",
+          "person": "The front desk approves the list rules, such as who is offered short-notice slots."
+        },
+        {
+          "name": "Urgent case handover",
+          "trigger": "A message or call mentions pain, swelling, bleeding, an injury or anything else on your urgent list.",
+          "does": "Stops the booking conversation, gives your emergency instructions, and alerts the member of staff on duty straight away.",
+          "person": "A clinician or trained member of staff decides what happens next. The assistant never assesses symptoms."
+        }
+      ]
+    },
+    "worth": {
+      "lede": "A worked example for a practice with a few chairs. Your diary, fees and no-show numbers will be different, so treat this as the shape of the sum.",
+      "assumptions": [
+        "600 booked appointments a month across the practice",
+        "30 of them missed without notice today, with reminders and one-tap rescheduling saving 12",
+        "6 patients a month who message after closing now book, where before they heard nothing until morning",
+        "An average appointment worth $150",
+        "15 hours a month of reminder and booking calls handed back to the front desk, at $22 an hour"
+      ],
+      "ledger": {
+        "sample": true,
+        "caption": "Illustrative month, 600 appointments",
+        "rows": [
+          { "label": "Missed appointments recovered", "note": "12 a month at $150", "value": "+$1,800" },
+          { "label": "After-hours bookings kept", "note": "6 a month at $150", "value": "+$900" },
+          { "label": "Front desk time back", "note": "15 hours at $22", "value": "+$330" },
+          { "label": "Monthly retainer", "note": "Phone and WhatsApp receptionist", "value": "−$1,200" }
+        ],
+        "total": { "label": "Illustrative net per month", "value": "$1,830" }
+      },
+      "setupNote": "One-off setup in this example: $4,500, covered in the third month."
+    },
+    "tools": {
+      "groups": [
+        { "label": "Practice management", "text": "Works with practice management systems such as Dentally, Cliniko, Jane, Open Dental and Dentrix, where the vendor offers an API or an approved integration. We check yours in the audit." },
+        { "label": "Messaging and phone", "text": "WhatsApp Business API, SMS, and a voice AI line that can answer every call or only the ones your front desk cannot reach." },
+        { "label": "Calendar and email", "text": "Google Calendar, Outlook and your practice inbox." },
+        { "label": "Built on", "text": "n8n, Make or Zapier for the workflow, with the OpenAI API or Claude API for the conversation." }
+      ]
+    },
+    "trust": {
+      "ownerNote": "TODO: confirm your compliance position: whether you will sign business associate agreements (HIPAA) and data processing agreements (UK GDPR), which AI, voice and messaging vendors you will use for patient data, and the exact wording you are comfortable publishing on this page.",
+      "items": [
+        { "title": "No medical advice", "text": "The assistant books, reminds and answers practical questions such as opening hours, parking and what to bring. It does not assess symptoms, suggest treatment or comment on medication." },
+        { "title": "Urgent cases go to a person", "text": "You give us the words and situations that count as urgent. When one comes up, the assistant stops, gives your emergency instructions and alerts your team." },
+        { "title": "Patient data is agreed per project", "text": "Which data the assistant can see, where it is processed and how long it is kept are written down before anything is built. If your practice falls under HIPAA or UK GDPR, the tools, agreements and hosting are chosen with you to fit, and you confirm them with your own compliance adviser." },
+        { "title": "It says it is an assistant", "text": "Patients are told they are talking to an automated assistant and can ask for a member of staff at any point." },
+        { "title": "You own the accounts", "text": "The phone number, WhatsApp account and workflow accounts belong to the practice." }
+      ]
+    },
+    "faq": {
+      "items": [
+        { "q": "Is it safe to let an AI talk to patients?", "a": "It is limited to booking, reminders and practical questions, and it is told what it must not do. Anything clinical, urgent or upset goes to your team with the conversation attached. You read and approve every script before it goes live." },
+        { "q": "What about HIPAA or UK GDPR?", "a": "It depends on your practice and the tools involved, so we agree it in writing per project: what data is used, where it is processed and which agreements are needed. We will tell you plainly if a tool you want cannot be used the way your rules require." },
+        { "q": "Does it work with our practice management system?", "a": "If your system offers an API or an approved integration, the assistant can read free slots and write bookings directly. If it does not, there are slower routes, such as a shared booking calendar that staff confirm. We check this first, in the audit." },
+        { "q": "Can we start small?", "a": "Yes. Reminders and recalls alone are a sensible first step, because they touch no clinical decisions. Booking by WhatsApp or phone can be added later. The assistant is always clear about what it is, and a person is one message away." },
+        { "q": "Can it answer the phone, or only WhatsApp?", "a": "Both. The voice line can answer every call, or only the ones your front desk cannot pick up within a few rings. Each call is summarised in writing so staff can see what was booked." }
+      ]
+    },
+    "pilot": {
+      "lede": "Reminders and recall make a good first project. They touch no clinical decisions, and the result shows up in the diary.",
+      "scope": [
+        "Appointment reminders with one-tap confirm and reschedule, on WhatsApp or SMS",
+        "Recall messages for one group, such as patients overdue a hygiene appointment",
+        "Urgent-word handover to a named member of staff",
+        "A weekly report: confirmed, rescheduled, recalled and booked"
+      ],
+      "timeline": [
+        { "when": "Week 1", "text": "Access to the diary, message wording, the urgent list and data handling agreed in writing." },
+        { "when": "Week 2", "text": "Built and tested with staff phones, not patients." },
+        { "when": "Weeks 3 to 4", "text": "Live for one clinician or one appointment type first, then the whole diary." }
+      ]
+    }
+  },
+  {
+    "slug": "agencies-sales-teams",
+    "name": "Agencies and B2B sales teams",
+    "icon": "briefcase-business",
+    "photo": "industry-agencies-sales",
+    "short": "Meeting notes into the CRM and follow-ups sent, without anyone typing them up.",
+    "title": "AI automation for agencies and B2B sales teams",
+    "description": "For agencies and B2B sales teams: call notes written for you, the CRM updated after every meeting, and the follow-up drafted before the next call starts.",
+    "linkLabel": "See the agencies and sales teams page",
+    "headline": "Your pipeline is only as good as last week's call notes",
+    "lede": "We connect your meetings to your CRM. When a call ends, the notes are written, the deal is updated, next steps become tasks and the follow-up email is waiting as a draft. Reps review and send. Nobody types up a call again.",
+    "hero": {
+      "type": "runlog",
+      "title": "Thursday, after a discovery call",
+      "events": [
+        { "time": "15:02", "who": "system", "text": "Call with a prospect ends. Recording and transcript are ready." },
+        { "time": "15:03", "who": "ai", "text": "Writes the call notes: goals, budget, who decides, objections, agreed next steps." },
+        { "time": "15:03", "who": "ai", "text": "Updates the deal in the CRM: stage, amount, close date and three tasks with owners." },
+        { "time": "15:04", "who": "ai", "text": "Drafts the follow-up email with the recap and the proposal date." },
+        { "time": "15:09", "who": "team", "text": "Rep reads the draft, changes one line and sends it." }
+      ],
+      "footer": "Call ended to follow-up sent: 7 minutes"
+    },
+    "pains": {
+      "lede": "Selling is the job. This is the part that crowds it out.",
+      "items": [
+        { "title": "Notes get written at 6pm, or never", "text": "After five calls in a day, the details of the first one are gone. What reaches the CRM is one line." },
+        { "title": "The CRM does not match reality", "text": "Stages, amounts and close dates are updated the night before the pipeline review, so the forecast is a guess." },
+        { "title": "Follow-ups go out late", "text": "The recap email waits behind the next call, and the prospect's interest cools while it does." },
+        { "title": "Handovers lose the detail", "text": "When a deal moves from sales to delivery, or from one rep to another, what the client actually said stays in someone's head." }
+      ]
+    },
+    "automations": {
+      "lede": "Everything lands where your team already works: the deal record, the task list and the drafts folder.",
+      "flow": {
+        "title": "Main workflow: call ended to follow-up ready",
+        "nodes": [
+          { "icon": "mic", "label": "Call ends", "sub": "Recording and transcript" },
+          { "icon": "notebook-pen", "label": "Notes written", "sub": "In your format" },
+          { "icon": "database", "label": "CRM updated", "sub": "Stage, fields, tasks" },
+          { "icon": "mail", "label": "Follow-up drafted", "sub": "In the rep's style" },
+          { "icon": "user-check", "label": "Rep reviews and sends", "sub": "A few minutes" }
+        ]
+      },
+      "items": [
+        {
+          "name": "Call notes",
+          "trigger": "A recorded video or phone call ends.",
+          "does": "Writes structured notes in your format: needs, budget, decision makers, objections, competitors mentioned and next steps.",
+          "person": "The rep skims the notes and corrects anything the recording got wrong."
+        },
+        {
+          "name": "CRM update",
+          "trigger": "The notes are ready.",
+          "does": "Finds the right contact and deal, updates stage, amount and close date, fills the fields you care about, and creates tasks with owners and due dates.",
+          "person": "For changes you mark as sensitive, such as amount or stage, the rep approves with one click before it saves."
+        },
+        {
+          "name": "Follow-up draft",
+          "trigger": "The CRM update is done.",
+          "does": "Drafts the recap email in the rep's own style, with the agreed next steps and any promised documents listed.",
+          "person": "The rep edits and sends. Nothing goes to a client without a person pressing send."
+        },
+        {
+          "name": "CRM hygiene sweep",
+          "trigger": "Every Monday morning, or a schedule you choose.",
+          "does": "Lists deals with no next step, close dates in the past, missing amounts and contacts with no owner, and sends each rep their own short list.",
+          "person": "Reps fix their list. The sales lead sees what is still open."
+        },
+        {
+          "name": "Sales-to-delivery handover",
+          "trigger": "A deal is marked won.",
+          "does": "Builds a brief from every call and email on the deal: what was sold, what was promised, who is who, and the risks raised.",
+          "person": "The account lead reads it before the kickoff call."
+        }
+      ]
+    },
+    "worth": {
+      "lede": "A worked example for a six-person team. It counts admin time only, which is the part you can measure in the first month.",
+      "assumptions": [
+        "6 reps or account leads",
+        "10 client or prospect calls each a week, about 240 a month",
+        "12 minutes a call today on notes, the CRM and the follow-up",
+        "3 minutes a call to review what the automation prepared",
+        "A loaded cost of $50 an hour"
+      ],
+      "ledger": {
+        "sample": true,
+        "caption": "Illustrative month, 240 calls",
+        "rows": [
+          { "label": "Admin after calls today", "note": "240 calls at 12 minutes", "value": "48 h" },
+          { "label": "Review time after setup", "note": "240 calls at 3 minutes", "value": "12 h" },
+          { "label": "Hours back, valued at $50", "note": "36 hours a month", "value": "+$1,800" },
+          { "label": "Monthly retainer", "note": "Monitoring, fixes and changes", "value": "−$700" }
+        ],
+        "total": { "label": "Illustrative net per month", "value": "$1,100" }
+      },
+      "setupNote": "One-off setup in this example: $3,000, covered in the third month. Not counted: deals that stop slipping because the follow-up went out the same day."
+    },
+    "tools": {
+      "groups": [
+        { "label": "CRM", "text": "Works with CRMs such as HubSpot, Salesforce, Pipedrive, Zoho CRM and Close." },
+        { "label": "Meetings and calls", "text": "Recordings from Zoom, Google Meet and Microsoft Teams, plus phone systems that provide call recordings." },
+        { "label": "Email and tasks", "text": "Gmail, Outlook, Slack, and project tools such as Asana or ClickUp for handovers." },
+        { "label": "Built on", "text": "n8n, Make or Zapier for the workflow, with the OpenAI API or Claude API for the writing." }
+      ]
+    },
+    "trust": {
+      "ownerNote": "TODO: confirm your compliance position: call-recording consent wording per region (two-party consent states in the US, notice rules in the UK and EU), default retention periods, and whether client NDAs allow AI processing of call content.",
+      "items": [
+        { "title": "Recording needs consent", "text": "Call recording rules differ by country and state. The recorder announces itself, and you decide which calls are recorded and how participants are told." },
+        { "title": "A person sends every email", "text": "Follow-ups are drafts. Nothing goes to a client or prospect until a rep has read it and pressed send." },
+        { "title": "Sensitive fields need approval", "text": "You choose which CRM changes save automatically and which wait for a click, so the forecast is never rewritten without the rep seeing it." },
+        { "title": "Your data stays in your accounts", "text": "Recordings, transcripts and notes live in your own CRM and storage, and how long they are kept is your setting. Confidentiality terms you have signed with clients are checked before any call is processed." },
+        { "title": "You own the accounts", "text": "The CRM, the recorder and the workflow accounts are in your company's name. If we stop working together, everything keeps running." }
+      ]
+    },
+    "faq": {
+      "items": [
+        { "q": "Are the notes accurate enough to trust?", "a": "They are good on what was said and agreed, and weaker on names, numbers and strong accents, which is why the rep reviews before anything is sent. In the pilot we compare the notes against a sample of calls with you, and tune the format until your team would rather edit them than write their own." },
+        { "q": "Does this need a bot in every meeting?", "a": "Not always. If your meeting tool already records, the automation can work from that recording. Where a notetaker joins the call, it announces itself. You choose which meetings are covered." },
+        { "q": "We tried a notetaker app and nobody used it. Why is this different?", "a": "A summary that sits in a separate app is one more place to look. This puts the result where the work already happens: the deal record, the task list and the drafts folder. Reps do less, not one more thing." },
+        { "q": "Can it follow our sales method?", "a": "Yes. If you qualify with a set of questions, such as budget, authority, need and timing, the notes and CRM fields follow that structure, and the hygiene sweep flags deals where an answer is missing." },
+        { "q": "What about calls with confidential client details?", "a": "You can exclude clients, meeting types or individual calls. Recordings and notes stay in your own accounts, and we agree retention and access in writing before the build." }
+      ]
+    },
+    "pilot": {
+      "lede": "Start with one team and one call type. New-business discovery calls are a good choice, because a missed follow-up there costs the most.",
+      "scope": [
+        "Call notes in your format for one call type",
+        "CRM update for one pipeline, with approval on the fields you choose",
+        "Follow-up email drafts in each rep's style",
+        "A weekly report: calls processed, drafts sent, fields corrected by reps"
+      ],
+      "timeline": [
+        { "when": "Week 1", "text": "Access, your note format, the CRM fields that matter and the approval rules agreed." },
+        { "when": "Week 2", "text": "Built and tested on past recordings. Reps mark what is wrong." },
+        { "when": "Weeks 3 to 4", "text": "Live for two or three reps, then the whole team once the notes need little editing." }
+      ]
+    }
+  },
+  {
+    "slug": "bookkeeping",
+    "name": "Bookkeeping firms",
+    "icon": "calculator",
+    "photo": "industry-bookkeeping",
+    "short": "Invoices and bank lines matched automatically, with only the exceptions left for a person.",
+    "title": "AI automation for bookkeeping firms",
+    "description": "For bookkeeping firms: bank feeds matched to invoices and receipts automatically, missing documents chased for you, and only the exceptions left for a person.",
+    "linkLabel": "See the bookkeeping page",
+    "headline": "Month-end should be the exceptions, not every line",
+    "lede": "We set up matching that reads each bank line, finds the invoice, bill or receipt, and proposes the entry with its reasoning. Your team approves the routine in batches and spends its time on the lines that need judgement. Nothing posts to a client's ledger without review unless you choose that.",
+    "hero": {
+      "type": "ledger",
+      "sample": true,
+      "caption": "Reconciliation run, one client, 06:00",
+      "rows": [
+        { "label": "Bank lines imported from the feed", "value": "412" },
+        { "label": "Matched to an invoice, bill or receipt", "note": "Amount, date and reference all agree", "value": "371" },
+        { "label": "Matched by a rule you approved", "note": "Waiting for one batch approval", "value": "26" },
+        { "label": "Exceptions left for a person", "note": "6 missing receipts, 5 part payments, 4 unknown payees", "value": "15" }
+      ],
+      "total": { "label": "Ready for review at", "value": "06:04" }
+    },
+    "pains": {
+      "lede": "The judgement is the valuable part of the job. The matching is what eats the week.",
+      "items": [
+        { "title": "Bank feeds that still need a person on every line", "text": "Bank rules catch the obvious. The rest is someone clicking through lines, one client at a time." },
+        { "title": "Chasing clients for receipts and invoices", "text": "The same emails, to the same clients, every month, and the close waits for the replies." },
+        { "title": "Month-end piles up", "text": "Coding and matching are left until the last week, so the close runs late and the team works evenings to get it out." },
+        { "title": "Senior time spent on junior work", "text": "The people who should be reviewing and advising are keying supplier bills." }
+      ]
+    },
+    "automations": {
+      "lede": "It works alongside the bank rules you already have, and every proposal shows why it was made.",
+      "flow": {
+        "title": "Main workflow: bank line to reviewed entry",
+        "nodes": [
+          { "icon": "banknote", "label": "Bank feed", "sub": "New lines arrive" },
+          { "icon": "scan-line", "label": "Find the document", "sub": "Invoice, bill or receipt" },
+          { "icon": "list-checks", "label": "Propose the match", "sub": "With the reason" },
+          { "icon": "clipboard-list", "label": "Set exceptions aside", "sub": "For a person to decide" },
+          { "icon": "user-check", "label": "Bookkeeper approves", "sub": "Then it posts" }
+        ]
+      },
+      "items": [
+        {
+          "name": "Bank line matching",
+          "trigger": "New lines arrive on a client's bank feed.",
+          "does": "Matches each line to an open invoice, bill or receipt by amount, date, reference and payee, and proposes the entry with a confidence score and its reason.",
+          "person": "A bookkeeper approves proposed matches in batches and works the exceptions."
+        },
+        {
+          "name": "Bill and receipt capture",
+          "trigger": "A client emails, uploads or photographs a document.",
+          "does": "Reads the supplier, date, amounts and tax, suggests the account code from that client's history, and attaches the document to the entry.",
+          "person": "Anything new, unclear or over a limit you set waits for review."
+        },
+        {
+          "name": "Missing-document chaser",
+          "trigger": "A bank line has no document after a number of days you choose.",
+          "does": "Sends the client one tidy list of what is missing, with a link to upload, and reminds them on your schedule.",
+          "person": "The client manager steps in for clients who do not respond."
+        },
+        {
+          "name": "Exceptions queue",
+          "trigger": "A line cannot be matched or breaks a rule, such as a duplicate, a part payment or an unknown payee.",
+          "does": "Puts it in one queue per client with the likely explanation and the nearest candidates.",
+          "person": "A bookkeeper decides. Their decision can become a rule for next time, if they approve it."
+        },
+        {
+          "name": "Month-end close checklist",
+          "trigger": "The last working day of the month, or your own close calendar.",
+          "does": "Checks each client for unreconciled lines, open exceptions, missing documents and unusual balances, and sends the status to the client manager.",
+          "person": "The reviewer signs off the close."
+        }
+      ]
+    },
+    "worth": {
+      "lede": "A worked example for a small firm. It only counts the lines your existing bank rules do not already catch.",
+      "assumptions": [
+        "2,400 bank lines a month, across your clients, that bank rules do not match",
+        "2 minutes a line by hand today",
+        "A match proposed for 1,800 of them, approved in batches at about 20 seconds each",
+        "600 exceptions that still take 2 minutes each",
+        "Bookkeeper time costed at $35 an hour"
+      ],
+      "ledger": {
+        "sample": true,
+        "caption": "Illustrative month, 2,400 bank lines",
+        "rows": [
+          { "label": "Matching by hand today", "note": "2,400 lines at 2 minutes", "value": "80 h" },
+          { "label": "Approving proposed matches", "note": "1,800 lines at 20 seconds", "value": "10 h" },
+          { "label": "Working the exceptions", "note": "600 lines at 2 minutes", "value": "20 h" },
+          { "label": "Hours back, valued at $35", "note": "50 hours a month", "value": "+$1,750" },
+          { "label": "Monthly retainer", "note": "Monitoring, fixes and changes", "value": "−$800" }
+        ],
+        "total": { "label": "Illustrative net per month", "value": "$950" }
+      },
+      "setupNote": "One-off setup in this example: $4,000, covered in the fifth month. Not counted: the extra clients that 50 hours a month would let you take on without hiring."
+    },
+    "tools": {
+      "groups": [
+        { "label": "Accounting software", "text": "Works with ledgers such as Xero, QuickBooks Online, Sage and Zoho Books, through their own connections." },
+        { "label": "Bank feeds and documents", "text": "The bank feeds already in your accounting software, capture tools such as Dext or Hubdoc if you use them, and email inboxes and shared drives." },
+        { "label": "Client communication", "text": "Email, WhatsApp Business API, and your practice management tool for tasks and deadlines." },
+        { "label": "Built on", "text": "n8n, Make or Zapier for the workflow, with the OpenAI API or Claude API for reading documents." }
+      ]
+    },
+    "trust": {
+      "ownerNote": "TODO: confirm your compliance position: data processing agreements for client financial data (UK GDPR and US state privacy laws), your professional body's rules on outsourcing and AI use, and engagement-letter wording that tells clients how their data is processed.",
+      "items": [
+        { "title": "A person approves exceptions", "text": "The automation proposes. A bookkeeper decides anything that is not a clean match, and can see why each match was suggested." },
+        { "title": "Nothing posts unreviewed unless you choose", "text": "By default every entry waits for approval. If you decide that certain clean matches may post automatically for a client, that is your written rule, with limits, and it can be switched off." },
+        { "title": "Every entry has a trail", "text": "Each proposed and approved entry records the source document, the reason for the match and who approved it." },
+        { "title": "Client data stays in your systems", "text": "The work runs through your accounting software's own access controls. Which data leaves it, where it is processed and for how long are agreed in writing first." },
+        { "title": "Not tax or accounting advice", "text": "The automation does matching and chasing. Treatment, judgement and sign-off stay with your qualified staff." }
+      ]
+    },
+    "faq": {
+      "items": [
+        { "q": "How is this different from the bank rules in our accounting software?", "a": "Bank rules match on fixed text. This reads the document as well as the line, so it can handle references that change, part payments, batched payouts and suppliers it has not seen in that exact form. It works alongside your existing rules and leaves them in place." },
+        { "q": "Can it post entries by itself?", "a": "Only if you choose that, client by client, for the kinds of match you define. The default is that everything waits for a bookkeeper to approve." },
+        { "q": "What happens when it gets one wrong?", "a": "Proposed matches show their reason, so a wrong one is quick to spot and reject. Rejections are logged and used to adjust the rules. In the pilot we measure how many proposals your team accepts unchanged before anything is widened." },
+        { "q": "How do you get access to client ledgers?", "a": "Through a user or app connection that you create and control in your accounting software, limited to the clients in scope. You can remove it at any time. We do not hold client bank logins." },
+        { "q": "Does it handle multi-currency and sales tax or VAT?", "a": "It reads currency and tax amounts from the documents and proposes the tax code from each client's history. Unusual treatments go to the exceptions queue for a person." }
+      ]
+    },
+    "pilot": {
+      "lede": "Start with a handful of clients who have high transaction volume and tidy documents, so the result is easy to measure.",
+      "scope": [
+        "Bank line matching for 5 to 10 clients on one accounting platform",
+        "An exceptions queue per client, with the reason for each exception",
+        "A monthly missing-document chaser for those clients",
+        "A weekly report: lines proposed, approved unchanged, corrected and left as exceptions"
+      ],
+      "timeline": [
+        { "when": "Week 1", "text": "Access, your matching rules, approval limits and data handling agreed in writing." },
+        { "when": "Week 2", "text": "Run on last month's closed books and compared with what your team actually posted." },
+        { "when": "Weeks 3 to 4", "text": "Live on current bank feeds, with every proposal approved by a bookkeeper." }
+      ]
+    }
+  }
+]

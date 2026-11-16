@@ -1,0 +1,473 @@
+{
+  "meta": {
+    "title": "AI automations for small businesses",
+    "description": "Veeboo AI builds and runs AI automations and agents for small teams: lead response, AI receptionists, meeting notes to CRM, invoice reconciliation. Book a free AI audit."
+  },
+  "hero": {
+    "eyebrow": "Done-for-you AI automations",
+    "title": "AI automations that pay for themselves",
+    "lede": "We build and run the automations that answer your leads, book appointments, write up meetings and match invoices. Every account stays in your name.",
+    "secondaryCta": {
+      "label": "See pricing",
+      "href": "/pricing/"
+    },
+    "reassurances": [
+      "You own every account",
+      "Month to month, no lock-in",
+      "Pilot live in 2 to 4 weeks"
+    ],
+    "demoLabel": "Watch one run",
+    "windowTitle": "Automation log",
+    "liveLabel": "Live run",
+    "demoNote": "Example runs. Times and names are illustrative.",
+    "payback": {
+      "caption": "Payback on one automation",
+      "tag": "Illustrative",
+      "rows": [
+        {
+          "label": "Setup fee",
+          "value": "$2,500"
+        },
+        {
+          "label": "Retainer",
+          "value": "$750/mo"
+        },
+        {
+          "label": "Time saved",
+          "value": "$1,430/mo"
+        }
+      ],
+      "total": {
+        "label": "Paid back in",
+        "value": "4 months"
+      }
+    },
+    "runs": [
+      {
+        "industry": "real-estate",
+        "tab": "Real estate",
+        "title": "A portal enquiry at 11:42 at night",
+        "events": [
+          {
+            "time": "11:42 pm",
+            "who": "customer",
+            "text": "Priya asks about the 3-bed on Maple Street through a listing portal."
+          },
+          {
+            "time": "11:42 pm",
+            "who": "ai",
+            "text": "Reply sent on WhatsApp with the price, floor plan and two questions: budget and move date."
+          },
+          {
+            "time": "11:44 pm",
+            "who": "customer",
+            "text": "She answers. Pre-approved, moving in March."
+          },
+          {
+            "time": "11:45 pm",
+            "who": "ai",
+            "text": "Marked as a hot lead in the CRM and offered three viewing slots."
+          },
+          {
+            "time": "11:46 pm",
+            "who": "team",
+            "text": "Viewing booked for Saturday 10:30. Agent Sam gets the summary on his phone."
+          }
+        ],
+        "footer": "First reply in under a minute. Nobody was awake.",
+        "bubble": {
+          "channel": "WhatsApp",
+          "text": "Hi Priya, the 3-bed on Maple Street has a garden and a garage. Floor plan attached. What budget and move date do you have in mind?",
+          "time": "11:42 pm"
+        },
+        "chip": {
+          "icon": "calendar-check",
+          "label": "Viewing booked",
+          "sub": "Sat 10:30 with Sam"
+        }
+      },
+      {
+        "industry": "clinics-dental",
+        "tab": "Clinics",
+        "title": "A missed call during the lunch rush",
+        "events": [
+          {
+            "time": "1:07 pm",
+            "who": "customer",
+            "text": "Daniel calls about a chipped tooth. Both front-desk lines are busy."
+          },
+          {
+            "time": "1:07 pm",
+            "who": "ai",
+            "text": "The AI receptionist picks up, checks it is not an emergency, and looks at the diary."
+          },
+          {
+            "time": "1:09 pm",
+            "who": "ai",
+            "text": "Books him in for Thursday 9:15 and sends the confirmation on WhatsApp."
+          },
+          {
+            "time": "Wed 9:00 am",
+            "who": "ai",
+            "text": "Reminder sent. Daniel confirms with one tap."
+          },
+          {
+            "time": "Thu 9:15 am",
+            "who": "team",
+            "text": "He arrives. The front desk never had to call him back."
+          }
+        ],
+        "footer": "A call that used to go to voicemail became a booked chair.",
+        "bubble": {
+          "channel": "WhatsApp",
+          "text": "You are booked for Thursday at 9:15. We will remind you the day before. Reply CHANGE to move it.",
+          "time": "1:09 pm"
+        },
+        "chip": {
+          "icon": "calendar-check",
+          "label": "Appointment booked",
+          "sub": "Thu 9:15, Daniel"
+        }
+      },
+      {
+        "industry": "agencies-sales-teams",
+        "tab": "Sales teams",
+        "title": "A discovery call ends at 3:30",
+        "events": [
+          {
+            "time": "3:30 pm",
+            "who": "team",
+            "text": "Maya finishes a 40-minute call with a new prospect."
+          },
+          {
+            "time": "3:31 pm",
+            "who": "ai",
+            "text": "Notes written: goals, budget, objections, and who signs off."
+          },
+          {
+            "time": "3:32 pm",
+            "who": "ai",
+            "text": "CRM deal updated: stage, value, next step and close date."
+          },
+          {
+            "time": "3:33 pm",
+            "who": "ai",
+            "text": "Follow-up email drafted in Maya's own style, with the proposal attached."
+          },
+          {
+            "time": "3:36 pm",
+            "who": "team",
+            "text": "Maya reads it, changes one line and sends."
+          }
+        ],
+        "footer": "Six minutes after the call, the admin is finished.",
+        "bubble": {
+          "channel": "Draft email",
+          "text": "Thanks for the time today. As promised, the proposal is attached, with the two options we talked through.",
+          "time": "3:33 pm"
+        },
+        "chip": {
+          "icon": "database",
+          "label": "CRM deal updated",
+          "sub": "Stage: proposal sent"
+        }
+      },
+      {
+        "industry": "bookkeeping",
+        "tab": "Bookkeeping",
+        "title": "Monday's bank feed for one client",
+        "events": [
+          {
+            "time": "6:00 am",
+            "who": "system",
+            "text": "212 new bank lines and 187 supplier invoices arrive overnight."
+          },
+          {
+            "time": "6:02 am",
+            "who": "ai",
+            "text": "Invoices read and matched to bank lines by amount, date and supplier."
+          },
+          {
+            "time": "6:05 am",
+            "who": "ai",
+            "text": "196 lines matched and coded. 16 flagged with the reason for each."
+          },
+          {
+            "time": "9:10 am",
+            "who": "team",
+            "text": "Leah reviews the 16 exceptions and approves the batch."
+          },
+          {
+            "time": "9:25 am",
+            "who": "team",
+            "text": "Reconciliation done. Leah moves on to the next client."
+          }
+        ],
+        "footer": "A person checked 16 lines instead of 212.",
+        "bubble": {
+          "channel": "Team alert",
+          "text": "Monday batch ready. 16 lines need a look, each with the reason it was flagged.",
+          "time": "6:05 am"
+        },
+        "chip": {
+          "icon": "list-checks",
+          "label": "196 of 212 matched",
+          "sub": "16 left for Leah"
+        }
+      }
+    ]
+  },
+  "stack": {
+    "label": "Built with",
+    "note": "Set up inside accounts in your name."
+  },
+  "problem": {
+    "eyebrow": "Where the money leaks",
+    "title": "The work that slips is the work that pays",
+    "lede": "Small teams lose money in the gaps: the enquiry answered tomorrow, the call that rang out, the follow-up nobody wrote. These are the gaps we close.",
+    "beforeLabel": "Today",
+    "afterLabel": "With an automation running",
+    "pairs": [
+      {
+        "label": "New enquiries",
+        "icon": "inbox",
+        "before": "Leads wait hours for a reply, and some go to whoever answered first.",
+        "beforeChip": "Replied next morning",
+        "after": "Every enquiry gets a useful reply in about a minute, at any hour.",
+        "afterChip": "Replied in about a minute"
+      },
+      {
+        "label": "Phone calls",
+        "icon": "phone-call",
+        "before": "Calls ring out at lunch and after closing.",
+        "beforeChip": "Sent to voicemail",
+        "after": "An AI receptionist answers, books the slot and sends the reminder.",
+        "afterChip": "Booked on the call"
+      },
+      {
+        "label": "Meeting notes",
+        "icon": "notebook-pen",
+        "before": "Call notes live in someone's head until Friday.",
+        "beforeChip": "Typed up on Friday",
+        "after": "Notes, CRM fields and the follow-up are ready minutes after the call.",
+        "afterChip": "Ready after the call"
+      },
+      {
+        "label": "Invoices",
+        "icon": "receipt",
+        "before": "Someone matches invoices to bank lines by hand, every week.",
+        "beforeChip": "Matched by hand",
+        "after": "The matches are done overnight. A person reviews only the exceptions.",
+        "afterChip": "Only exceptions left"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What we build",
+    "lede": "Five services, one aim: take a repetitive job off your team and keep it running.",
+    "linkLabel": "How it works",
+    "mockNote": "Illustrative",
+    "tiles": {
+      "workflow-automation": {
+        "tag": "Most common first build",
+        "runLabel": "Last run 2 minutes ago"
+      },
+      "ai-agents-chatbots": {
+        "tag": "Website, inbox, WhatsApp",
+        "status": "Online now"
+      },
+      "voice-whatsapp-receptionists": {
+        "tag": "Phone and WhatsApp",
+        "callLabel": "Incoming call",
+        "caller": "New patient",
+        "status": "AI receptionist answering",
+        "result": "Booked: Thursday 8:30",
+        "followUp": "Reminder set for Wednesday"
+      },
+      "meeting-intelligence": {
+        "tag": "Sales and client calls",
+        "docTitle": "Call notes",
+        "docTime": "Ready 2 minutes after the call",
+        "items": [
+          "3 decisions",
+          "2 objections",
+          "4 next steps"
+        ],
+        "crm": "CRM deal moved to proposal"
+      },
+      "ai-audit": {
+        "tag": "Free, 30 minutes",
+        "cta": "Book a free AI audit"
+      }
+    }
+  },
+  "industries": {
+    "eyebrow": "Industries",
+    "title": "Built for four kinds of business",
+    "lede": "We stay with the industries we know, so the first version already fits how you work.",
+    "linkLabel": "See the automations",
+    "cards": {
+      "real-estate": {
+        "chip": {
+          "icon": "message-circle",
+          "label": "New lead answered",
+          "sub": "3-bed on Maple Street"
+        }
+      },
+      "clinics-dental": {
+        "chip": {
+          "icon": "calendar-check",
+          "label": "Reminder confirmed",
+          "sub": "Thursday 9:15, one tap"
+        }
+      },
+      "agencies-sales-teams": {
+        "chip": {
+          "icon": "send",
+          "label": "Follow-up drafted",
+          "sub": "3 minutes after the call"
+        }
+      },
+      "bookkeeping": {
+        "chip": {
+          "icon": "list-checks",
+          "label": "Batch matched",
+          "sub": "16 lines left to review"
+        }
+      }
+    }
+  },
+  "commitments": {
+    "eyebrow": "What you can count on",
+    "title": "Four promises we put in writing",
+    "items": [
+      {
+        "value": "30 min",
+        "label": "Free AI audit",
+        "text": "One slow process, one costed plan. Yours to keep."
+      },
+      {
+        "value": "2 to 4 weeks",
+        "label": "From pilot to live",
+        "text": "One narrow workflow, running on real work."
+      },
+      {
+        "value": "30 days",
+        "label": "Notice to stop the retainer",
+        "text": "Month to month. No long contract."
+      },
+      {
+        "value": "100%",
+        "label": "Of accounts in your name",
+        "text": "Every workspace, key and login is yours."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "Four steps, and you can stop after any of them",
+    "lede": "You see it working on one process before you pay for anything bigger.",
+    "feeLabel": "What you pay",
+    "steps": [
+      {
+        "title": "Audit",
+        "text": "A free 30-minute call about one slow process. You get a written plan with the cost and the expected return.",
+        "meta": "Free",
+        "icon": "search-check",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Pilot",
+        "text": "We build that one automation in your own accounts and run it with real work for two to four weeks.",
+        "meta": "Setup fee",
+        "icon": "rocket",
+        "duration": "2 to 4 weeks"
+      },
+      {
+        "title": "Build",
+        "text": "If the pilot earns its keep, we connect it to the rest: CRM, calendar, phones, accounting.",
+        "meta": "Scoped and quoted up front",
+        "icon": "layers",
+        "duration": "Scoped with you"
+      },
+      {
+        "title": "Retainer",
+        "text": "We monitor it, fix what breaks, and make small changes as your business changes. Month to month.",
+        "meta": "Monthly retainer",
+        "icon": "repeat",
+        "duration": "Month to month"
+      }
+    ],
+    "plan": {
+      "title": "Your audit plan",
+      "subtitle": "Sent within two working days",
+      "items": [
+        "What to automate first",
+        "What it costs to build and run",
+        "What it should save each month",
+        "What we would leave alone"
+      ],
+      "footer": "Yours to keep, whether or not you hire us."
+    }
+  },
+  "caseStudy": {
+    "eyebrow": "Featured case study",
+    "clientLabel": "Client",
+    "durationLabel": "Timeline",
+    "stackLabel": "Built with",
+    "title": "What one project looked like",
+    "linkLabel": "Read the case study",
+    "allLabel": "All case studies",
+    "resultsCaption": "Results after the pilot"
+  },
+  "testimonials": {
+    "eyebrow": "In their words",
+    "title": "What clients say",
+    "lede": ""
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "featuredLabel": "Our pick for most small teams",
+    "title": "Prices you can read before the call",
+    "lede": "A setup fee to build it and a monthly retainer to keep it running. Tools and usage are billed to your own accounts, at cost.",
+    "setupLabel": "Setup",
+    "monthlyLabel": "Per month",
+    "linkLabel": "Compare the plans"
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Questions owners ask first",
+    "asideText": "Something else on your mind? Bring it to the audit call. It is free and there is no pitch at the end.",
+    "items": [
+      {
+        "q": "What happens in the free AI audit?",
+        "a": "You walk us through one slow, repetitive process on a 30-minute video call. Within two working days you get a short written plan: what to automate first, what it will cost to build and run, and what it should save. It is yours to keep, and you can take it to anyone."
+      },
+      {
+        "q": "Who owns the automations and the accounts?",
+        "a": "You do. Everything is built inside accounts in your name: your n8n, Make or Zapier workspace, your CRM, your API keys. If we stop working together you keep all of it, along with a handover document."
+      },
+      {
+        "q": "Is there a long contract?",
+        "a": "No. The setup fee covers the build. The retainer runs month to month and you can cancel it with 30 days' notice."
+      },
+      {
+        "q": "What if the AI gets something wrong?",
+        "a": "Each automation has rules for when to hand over to a person: an unusual request, a low-confidence answer, anything about money or health. During the pilot we review real conversations with you and tighten those rules before it runs on its own."
+      },
+      {
+        "q": "Do we need technical staff?",
+        "a": "No. We build it, document it and run it. Your team needs one person who knows the current process well enough to tell us when the automation gets it wrong."
+      },
+      {
+        "q": "You are based in India. How does working together go?",
+        "a": "By video call and a shared channel, with working hours that overlap the US, UK, UAE and Australia. You talk to the person who builds your automation, not an account manager."
+      },
+      {
+        "q": "What does it cost to run besides your fees?",
+        "a": "The tools themselves: an automation platform, AI model usage, and phone or WhatsApp messaging if you use them. These are billed to your own accounts at cost, and the audit plan includes an estimate."
+      }
+    ]
+  }
+}

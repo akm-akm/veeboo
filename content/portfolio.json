@@ -1,0 +1,233 @@
+[
+  {
+    "slug": "portal-lead-reply-and-viewing-booking",
+    "title": "Portal lead reply and viewing booking",
+    "client": "12-agent residential brokerage, Austin TX",
+    "industry": "real-estate",
+    "services": ["ai-agents-chatbots", "workflow-automation"],
+    "summary": "Every enquiry from the property portals gets a text within a minute, three qualifying questions and a viewing slot on the right agent's calendar.",
+    "stack": ["n8n", "OpenAI API", "SMS", "CRM"],
+    "outcome": "First reply down from about 3 hours to 47 seconds",
+    "caseStudy": "portal-leads-answered-in-under-a-minute",
+    "sample": true,
+    "visual": {
+      "type": "chat",
+      "messages": [
+        { "from": "us", "text": "Thanks for asking about the 3-bed on Mueller. Moving in the next three months?" },
+        { "from": "them", "text": "Yes, by March." },
+        { "from": "us", "text": "Saturday 10:30 or Sunday 2:00?" }
+      ]
+    }
+  },
+  {
+    "slug": "missed-call-text-back-for-a-lettings-team",
+    "title": "Missed-call text-back for a lettings team",
+    "client": "6-person lettings agency, Leeds",
+    "industry": "real-estate",
+    "services": ["voice-whatsapp-receptionists"],
+    "summary": "When a call goes unanswered, the caller gets a WhatsApp message within 30 seconds asking what they need. Viewing requests are booked, repairs are logged for the property manager.",
+    "stack": ["Voice AI", "WhatsApp Business API", "Make"],
+    "outcome": "Missed calls returned by message in 30 seconds",
+    "sample": true,
+    "visual": {
+      "type": "log",
+      "events": [
+        { "time": "17:52", "who": "customer", "text": "Call missed" },
+        { "time": "17:52", "who": "ai", "text": "WhatsApp sent" },
+        { "time": "17:56", "who": "system", "text": "Viewing booked" }
+      ]
+    }
+  },
+  {
+    "slug": "vendor-call-notes-into-the-crm",
+    "title": "Vendor call notes into the CRM",
+    "client": "8-agent sales office, Brisbane",
+    "industry": "real-estate",
+    "services": ["meeting-intelligence"],
+    "summary": "Appraisal calls with sellers are summarised under fixed headings: price expectation, timing, objections and next step. The note lands on the property record before the agent is back in the car.",
+    "stack": ["Meeting recorder", "Claude API", "CRM"],
+    "outcome": "Notes on the record 10 minutes after the call",
+    "sample": true,
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        { "icon": "mic", "label": "Call" },
+        { "icon": "file-text", "label": "Notes" },
+        { "icon": "database", "label": "CRM" }
+      ]
+    }
+  },
+  {
+    "slug": "whatsapp-and-phone-receptionist",
+    "title": "WhatsApp and phone receptionist",
+    "client": "Four-chair dental practice, Manchester",
+    "industry": "clinics-dental",
+    "services": ["voice-whatsapp-receptionists", "workflow-automation"],
+    "summary": "Calls and WhatsApp messages are answered day and night. Routine visits are booked in the diary, and anything about pain goes straight to a person.",
+    "stack": ["Voice AI", "WhatsApp Business API", "Make", "Claude API"],
+    "outcome": "Missed calls down from 41 a week to 3",
+    "caseStudy": "whatsapp-and-phone-receptionist-for-a-dental-practice",
+    "sample": true,
+    "visual": {
+      "type": "chat",
+      "messages": [
+        { "from": "them", "text": "Can I move my check-up on Thursday?" },
+        { "from": "us", "text": "Tuesday 8:40 or Friday 15:20?" },
+        { "from": "them", "text": "Friday please" }
+      ]
+    }
+  },
+  {
+    "slug": "patient-recall-reminders",
+    "title": "Patient recall reminders",
+    "client": "Physiotherapy clinic, Phoenix AZ",
+    "industry": "clinics-dental",
+    "services": ["workflow-automation"],
+    "summary": "Patients who have not rebooked after a course of treatment get a message offering three times. A one-word reply books the visit, and the clinic owner sees the week's rebookings in one list.",
+    "stack": ["Zapier", "SMS", "Booking system"],
+    "outcome": "27 follow-up visits booked in the first month",
+    "sample": true,
+    "visual": {
+      "type": "ledger",
+      "rows": [
+        { "label": "Reminders sent", "value": "96" },
+        { "label": "Replies", "value": "41" },
+        { "label": "Visits booked", "value": "27" }
+      ]
+    }
+  },
+  {
+    "slug": "website-assistant-for-treatment-questions",
+    "title": "Website assistant for treatment questions and bookings",
+    "client": "Skin clinic, Dubai",
+    "industry": "clinics-dental",
+    "services": ["ai-agents-chatbots"],
+    "summary": "A chat assistant on the clinic's website answers questions about treatments, prices and aftercare from the clinic's own approved wording, in English and Arabic, then offers a consultation slot.",
+    "stack": ["Claude API", "n8n", "Booking system"],
+    "outcome": "6 in 10 website questions answered without staff",
+    "sample": true,
+    "visual": {
+      "type": "chat",
+      "messages": [
+        { "from": "them", "text": "How long is a first consultation?" },
+        { "from": "us", "text": "About 30 minutes. Would you like Tuesday or Thursday?" }
+      ]
+    }
+  },
+  {
+    "slug": "sales-call-notes-and-follow-ups",
+    "title": "Sales call notes and follow-ups",
+    "client": "9-person B2B sales team, Sydney",
+    "industry": "agencies-sales-teams",
+    "services": ["meeting-intelligence", "workflow-automation"],
+    "summary": "After each customer call the notes are written, the deal is updated in the CRM and a follow-up email is drafted for the rep to read and send.",
+    "stack": ["Meeting recorder", "Claude API", "n8n", "CRM"],
+    "outcome": "Follow-up draft ready 12 minutes after the call",
+    "caseStudy": "sales-call-notes-and-follow-ups-written-for-the-rep",
+    "sample": true,
+    "visual": {
+      "type": "log",
+      "events": [
+        { "time": "14:35", "who": "team", "text": "Call ends" },
+        { "time": "14:41", "who": "system", "text": "CRM updated" },
+        { "time": "14:47", "who": "ai", "text": "Follow-up drafted" }
+      ]
+    }
+  },
+  {
+    "slug": "monthly-client-reports-assembled-automatically",
+    "title": "Monthly client reports assembled automatically",
+    "client": "14-person marketing agency, Bristol",
+    "industry": "agencies-sales-teams",
+    "services": ["workflow-automation"],
+    "summary": "Numbers from the ad platforms and analytics are pulled on the first of the month, dropped into each client's report template and given a plain-English summary for the account manager to edit.",
+    "stack": ["Make", "OpenAI API", "Spreadsheets", "Slides"],
+    "outcome": "Report prep down from 2 days to half a day",
+    "sample": true,
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        { "icon": "chart-line", "label": "Numbers" },
+        { "icon": "sparkles", "label": "Summary" },
+        { "icon": "file-text", "label": "Report" }
+      ]
+    }
+  },
+  {
+    "slug": "audit-of-a-candidate-enquiry-process",
+    "title": "Audit of a candidate enquiry process",
+    "client": "11-person recruitment agency, Denver CO",
+    "industry": "agencies-sales-teams",
+    "services": ["ai-audit"],
+    "summary": "A two-week review of how candidate and client enquiries are handled. The agency received a costed list of five possible automations, ranked by hours saved, with two marked as not worth doing yet.",
+    "stack": ["Process map", "Time log", "Costed plan"],
+    "outcome": "5 automations costed, 2 advised against",
+    "sample": true,
+    "visual": {
+      "type": "ledger",
+      "rows": [
+        { "label": "Enquiry sorting", "value": "14 hrs/mo" },
+        { "label": "Interview scheduling", "value": "22 hrs/mo" },
+        { "label": "Reference chasing", "value": "9 hrs/mo" }
+      ]
+    }
+  },
+  {
+    "slug": "invoice-to-bank-line-matching",
+    "title": "Invoice to bank line matching",
+    "client": "8-person bookkeeping firm, Dubai",
+    "industry": "bookkeeping",
+    "services": ["workflow-automation", "ai-audit"],
+    "summary": "Supplier invoices are read and matched to bank lines automatically. Bookkeepers work only from a queue of exceptions, each with the reason shown.",
+    "stack": ["Make", "Claude API", "Accounting software"],
+    "outcome": "82% of invoices matched without a person",
+    "caseStudy": "supplier-invoices-matched-to-bank-lines",
+    "sample": true,
+    "visual": {
+      "type": "ledger",
+      "rows": [
+        { "label": "Received", "value": "1,930" },
+        { "label": "Matched", "value": "1,583" },
+        { "label": "Exceptions", "value": "347" }
+      ]
+    }
+  },
+  {
+    "slug": "client-document-chaser",
+    "title": "Client document chaser",
+    "client": "5-person bookkeeping practice, Perth",
+    "industry": "bookkeeping",
+    "services": ["ai-agents-chatbots"],
+    "summary": "An assistant messages each client once a week with the payments that still have no receipt. Clients reply with a photo, and it is filed against the right transaction.",
+    "stack": ["WhatsApp Business API", "OpenAI API", "n8n"],
+    "outcome": "Missing receipts at month-end down by two thirds",
+    "sample": true,
+    "visual": {
+      "type": "log",
+      "events": [
+        { "time": "Mon", "who": "ai", "text": "4 receipts requested" },
+        { "time": "Tue", "who": "customer", "text": "3 photos received" },
+        { "time": "Tue", "who": "system", "text": "Filed to ledger" }
+      ]
+    }
+  },
+  {
+    "slug": "receipt-capture-from-email-to-accounts",
+    "title": "Receipt capture from email to accounts",
+    "client": "Sole-practitioner accountant, London",
+    "industry": "bookkeeping",
+    "services": ["workflow-automation"],
+    "summary": "Receipts forwarded to one email address are read, coded to an expense category and posted as drafts in the accounting software, ready for a weekly review.",
+    "stack": ["Zapier", "OpenAI API", "Accounting software"],
+    "outcome": "About 6 hours of keying saved each month",
+    "sample": true,
+    "visual": {
+      "type": "flow",
+      "nodes": [
+        { "icon": "mail", "label": "Email" },
+        { "icon": "scan-line", "label": "Read" },
+        { "icon": "receipt", "label": "Posted" }
+      ]
+    }
+  }
+]

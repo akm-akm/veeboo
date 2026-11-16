@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "title": "Services",
+    "description": "Five done-for-you AI services for small businesses: workflow automation, AI agents, voice and WhatsApp receptionists, meeting notes and a free AI audit."
+  },
+  "hero": {
+    "title": "What we build, and what each one takes",
+    "lede": "Every service is done for you: scoped in a free audit, proven in a short pilot, then looked after on a monthly retainer. You own every account from the first day.",
+    "pricingButton": "See pricing"
+  },
+  "labels": {
+    "jump": "Jump to a service",
+    "audience": "Who it is for",
+    "automations": "Automations it includes",
+    "deliverables": "What you get",
+    "agenda": "What happens in the 30 minutes",
+    "planContents": "What the written plan contains",
+    "timeline": "Typical timeline",
+    "startsFrom": "Starts from",
+    "startsFromFormat": "{setup} + {monthly}/mo",
+    "startsFromFallback": "See pricing",
+    "pricingLink": "See what is in each plan",
+    "illustrative": "Illustrative"
+  },
+  "faq": {
+    "title": "Questions owners ask before they start",
+    "items": [
+      {
+        "q": "Do I need to change the tools I already use?",
+        "a": "Usually not. We build around the CRM, calendar, inbox and phone system you have. If one of them cannot be connected, you hear that in the audit, before any money changes hands."
+      },
+      {
+        "q": "Who owns the automations once they are built?",
+        "a": "You do. Everything is built in accounts registered to your business, and we are invited in as a user. If we part ways, you remove our access and everything keeps running."
+      },
+      {
+        "q": "What happens when the AI gets something wrong?",
+        "a": "Every build has written rules for what it may do alone and what needs a person. A failed step raises an alert and the item is kept, so nothing is dropped without anyone knowing. Fixes are part of the retainer."
+      },
+      {
+        "q": "Where does my customer data go?",
+        "a": "It stays in your own accounts and the tools you choose. The AI model accounts are opened in your name, so their data terms are between you and the provider, and we go through those terms with you before anything goes live."
+      },
+      {
+        "q": "Can I start with one service and add more later?",
+        "a": "Yes, and that is the better way to do it. Start with one narrow workflow in a pilot, look at the numbers after a month, then decide what to add."
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Veeboo AI",
+  "tagline": "AI automations that pay for themselves",
+  "description": "Done-for-you AI automations and AI agents for small businesses in the US, UK, UAE and Australia. Setup fee plus a monthly retainer, and you own every account.",
+  "url": "https://TODO-your-domain.com",
+  "locale": "en",
+  "founder": "Aditya",
+  "location": "India, working with teams in the US, UK, UAE and Australia",
+  "email": "TODO-hello@your-domain.com",
+  "calendlyUrl": "TODO-https://calendly.com/your-handle/ai-audit",
+  "formEndpoint": "TODO-https://formspree.io/f/your-form-id",
+  "cta": {
+    "label": "Book a free AI audit",
+    "shortLabel": "Free AI audit",
+    "href": "/contact/",
+    "bandTitle": "Find the first automation worth paying for",
+    "bandText": "A 30-minute call. You walk through one slow, repetitive process, and you leave with a costed plan for automating it, whether or not you hire us."
+  },
+  "nav": [
+    { "label": "Services", "href": "/services/" },
+    { "label": "Industries", "href": "/industries/" },
+    { "label": "Work", "href": "/portfolio/" },
+    { "label": "Case studies", "href": "/case-studies/" },
+    { "label": "Pricing", "href": "/pricing/" },
+    { "label": "About", "href": "/about/" },
+    { "label": "Blog", "href": "/blog/" }
+  ],
+  "social": [
+    { "label": "LinkedIn", "icon": "linkedin", "href": "TODO-https://www.linkedin.com/in/your-handle" },
+    { "label": "GitHub", "icon": "github", "href": "TODO-https://github.com/your-handle" }
+  ],
+  "stack": ["n8n", "Make", "Zapier", "OpenAI API", "Claude API", "Voice AI", "WhatsApp Business API"],
+  "sampleNotice": "Sample content. Projects, quotes and figures marked “Sample” are illustrative placeholders, not real client results."
+}

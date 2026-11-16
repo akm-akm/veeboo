@@ -1,0 +1,40 @@
+{
+  "title": "Industries",
+  "description": "AI automations for real estate teams, clinics and dental practices, agencies and B2B sales teams, and bookkeeping firms. See what we set up for each.",
+  "crumb": "Industries",
+  "hero": {
+    "title": "Built around how your kind of business runs",
+    "lede": "We focus on four kinds of small business, where the slow, repetitive work is easy to name and worth automating. Pick yours to see what we set up, what a person still does, and what it should be worth."
+  },
+  "rows": {
+    "automationsLabel": "What we set up first"
+  },
+  "other": {
+    "title": "Not on this list?",
+    "text": "If your business runs on enquiries, appointments, documents or follow-ups, the same building blocks apply. Bring one slow process to a free audit. You leave with a costed plan for automating it, whether or not you hire us.",
+    "secondary": { "label": "See what the audit covers", "href": "/services/#ai-audit" }
+  },
+  "detail": {
+    "heroSecondary": "See what we set up",
+    "heroCaption": "An illustration of one run, not a real client record.",
+    "painsTitle": "Where the time goes today",
+    "automationsTitle": "What we set up",
+    "triggerLabel": "What starts it",
+    "doesLabel": "What it does",
+    "personLabel": "What a person still does",
+    "worthTitle": "What it should be worth",
+    "assumptionsLabel": "Worked from these assumptions",
+    "illustrativeNote": "Illustrative only. These are example numbers, not results from a client and not a promise. We work out your own version, with your figures, in the audit.",
+    "toolsTitle": "Tools it plugs into",
+    "toolsDisclaimer": "These are third-party products, named so you can see where the automation fits. Veeboo AI is not affiliated with or endorsed by any of them.",
+    "trustTitle": "What it will and will not do",
+    "casesTitle": "Related case studies",
+    "faqTitle": "Questions we get asked",
+    "pilotTitle": "A typical first project",
+    "pilotDuration": "2 to 4 weeks from kickoff to live",
+    "scopeLabel": "What is in the pilot",
+    "timelineLabel": "How the weeks go",
+    "pilotPriceNote": "One narrow workflow, at a fixed price agreed after the audit. You own every account from day one.",
+    "pricingLink": { "label": "See pricing", "href": "/pricing/" }
+  }
+}

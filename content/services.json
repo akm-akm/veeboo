@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "workflow-automation",
+    "name": "AI workflow automation",
+    "icon": "workflow",
+    "short": "The copy-paste work between your tools, done automatically: leads into the CRM, invoices matched, reports sent.",
+    "audience": "Teams where someone still copies details from one tool into another: enquiries into the CRM, bills into the books, numbers into a weekly report.",
+    "automations": [
+      { "name": "Lead capture to CRM", "text": "Every enquiry from your website, ads and inbox lands in the CRM with its source filled in, and the right person is told at once." },
+      { "name": "Invoice and receipt matching", "text": "Bills are read, matched to the bank line and queued for approval. Only the odd ones reach a person." },
+      { "name": "New client onboarding", "text": "A signed form creates the folder, the tasks, the welcome email and the first invoice." },
+      { "name": "Quote and invoice chasing", "text": "Open quotes and unpaid invoices get a polite reminder on a schedule you set, and stop the moment someone replies." },
+      { "name": "Weekly report, sent for you", "text": "The numbers are pulled from your tools every Monday and sent as one short email." }
+    ],
+    "deliverables": [
+      "The working automation, built in your own n8n, Make or Zapier account",
+      "A one-page map of what starts it and which tools it touches",
+      "An alert when a step fails, with the failed item kept so it can be retried",
+      "A short video walkthrough for your team"
+    ],
+    "timeline": { "value": "2 to 4 weeks", "note": "For the first workflow" },
+    "startsFrom": { "tier": "one-automation", "note": "Setup fee, then monthly retainer" },
+    "mock": {
+      "type": "flow",
+      "title": "New enquiry to notified owner",
+      "note": "Illustrative workflow. Yours is drawn around the tools you already use.",
+      "nodes": [
+        { "icon": "inbox", "label": "Website form", "sub": "A new enquiry arrives" },
+        { "icon": "sparkles", "label": "AI reads it", "sub": "Sorts by type and urgency" },
+        { "icon": "database", "label": "CRM updated", "sub": "Contact and source saved" },
+        { "icon": "bell", "label": "Owner notified", "sub": "With a suggested reply" }
+      ]
+    }
+  },
+  {
+    "slug": "ai-agents-chatbots",
+    "name": "AI agents and chatbots",
+    "icon": "bot",
+    "short": "An assistant on your website, WhatsApp or inbox that answers, qualifies and books, then hands over to a person when it should.",
+    "audience": "Businesses that answer the same questions all day, on the website, in the inbox or on WhatsApp, and lose the enquiries that arrive after hours.",
+    "automations": [
+      { "name": "Website chat that qualifies", "text": "It asks the three or four questions you would ask, then books a call or passes the enquiry to you." },
+      { "name": "Inbox triage and draft replies", "text": "Incoming email is sorted and a reply is drafted in your voice. A person approves it before it goes." },
+      { "name": "Answers from your own documents", "text": "It answers from your price list, policies and FAQs, and says so when it does not know." },
+      { "name": "Handover to a person", "text": "When someone asks for a human, is upset, or asks something outside the rules, your team gets the whole conversation." },
+      { "name": "Quiet-lead follow-up", "text": "People who went quiet get a check-in. It stops when they reply or opt out." }
+    ],
+    "deliverables": [
+      "The agent running on your channels, under your accounts",
+      "Written rules: what it may answer alone and what it must hand over",
+      "A conversation log you can read at any time",
+      "A monthly review of the questions it could not answer"
+    ],
+    "timeline": { "value": "3 to 4 weeks", "note": "Including a week of supervised replies" },
+    "startsFrom": { "tier": "connected-system", "note": "Setup fee, then monthly retainer" },
+    "mock": {
+      "type": "chat",
+      "title": "Website assistant",
+      "subtitle": "Example conversation",
+      "note": "Illustrative conversation, not a real customer.",
+      "messages": [
+        { "from": "them", "text": "Hi, do you manage rentals on the north side of town?" },
+        { "from": "us", "text": "Yes, we do. Is it a flat or a house, and is it let at the moment?" },
+        { "from": "them", "text": "2-bed flat, empty from next month." },
+        { "from": "us", "text": "Thanks. A property manager can call you tomorrow. Is 10:30 or 2:00 better?" },
+        { "from": "them", "text": "10:30" },
+        { "from": "us", "text": "Booked for 10:30 tomorrow. A confirmation is on its way by email, and the manager has your details." }
+      ]
+    }
+  },
+  {
+    "slug": "voice-whatsapp-receptionists",
+    "name": "Voice and WhatsApp receptionists",
+    "icon": "phone-call",
+    "short": "Every call and message answered day and night. Appointments booked, reminders sent, urgent cases passed to your team.",
+    "audience": "Clinics, brokerages and service firms that miss calls while the front desk is busy or closed, and whose customers would rather send a message.",
+    "automations": [
+      { "name": "Missed-call text-back", "text": "A caller who does not get through gets a message within a minute, offering to book or to ask their question." },
+      { "name": "Call answering and booking", "text": "A voice agent picks up, answers the common questions, books into your calendar and takes a message for the rest." },
+      { "name": "Appointment reminders", "text": "A WhatsApp or text reminder with a one-tap confirm or reschedule. Freed slots go back into the diary." },
+      { "name": "Patient and client recall", "text": "People due a check-up, a review or a renewal get a message and a way to book." },
+      { "name": "Urgent-case handover", "text": "Anything that sounds urgent goes to a named person by call or message straight away." }
+    ],
+    "deliverables": [
+      "A phone number or WhatsApp Business line registered in your name",
+      "Scripts and rules you have approved, including what it must never say",
+      "Bookings written straight into your calendar or practice system",
+      "A daily summary of calls, bookings and handovers"
+    ],
+    "timeline": { "value": "4 to 6 weeks", "note": "Including WhatsApp Business approval and test calls" },
+    "startsFrom": { "tier": "connected-system", "note": "For a WhatsApp receptionist. Voice lines are scoped as custom." },
+    "mock": {
+      "type": "chat",
+      "title": "Clinic reception on WhatsApp",
+      "subtitle": "Example conversation, 9:42 pm",
+      "note": "Illustrative conversation, not a real patient.",
+      "messages": [
+        { "from": "us", "text": "Hi, this is the reception assistant at the clinic. We missed your call just now. Would you like to book, or do you have a question?" },
+        { "from": "them", "text": "Need a check-up, mornings only" },
+        { "from": "us", "text": "We have Tuesday at 9:15 or Thursday at 8:30. Which suits you?" },
+        { "from": "them", "text": "Thursday" },
+        { "from": "us", "text": "You are booked for Thursday at 8:30. A reminder will come the day before. Reply CHANGE to move it." }
+      ]
+    }
+  },
+  {
+    "slug": "meeting-intelligence",
+    "name": "Meeting intelligence",
+    "icon": "notebook-pen",
+    "short": "Call notes written for you, the CRM updated, and the follow-up email drafted before you have left the meeting.",
+    "audience": "Sales teams, agencies and advisers who spend the hour after every call writing notes, updating the CRM and drafting the follow-up.",
+    "automations": [
+      { "name": "Call notes written for you", "text": "Decisions, objections and next steps, set out in the template you already use." },
+      { "name": "CRM updated after each call", "text": "The deal stage, contact notes and tasks are filled in without anyone typing them." },
+      { "name": "Follow-up email drafted", "text": "A reply that reflects what was agreed, waiting in your drafts for you to approve." },
+      { "name": "Action items to your task tool", "text": "Each promise made on the call becomes a task with an owner and a date." },
+      { "name": "Weekly pipeline digest", "text": "What moved, what stalled, and which promised follow-ups are overdue." }
+    ],
+    "deliverables": [
+      "A notetaker connected to your calendar and meeting tools",
+      "A recording notice on every call, and a rule for meetings that are never recorded",
+      "Note and email templates matched to how you already write",
+      "A CRM field mapping that you sign off before it goes live"
+    ],
+    "timeline": { "value": "2 to 3 weeks", "note": "For one team and one CRM" },
+    "startsFrom": { "tier": "one-automation", "note": "Setup fee, then monthly retainer" },
+    "mock": {
+      "type": "runlog",
+      "title": "After a 30-minute sales call",
+      "footer": "About 10 minutes from the end of the call to a sent follow-up.",
+      "note": "Illustrative timeline, not a measured result.",
+      "events": [
+        { "time": "11:30", "who": "customer", "text": "The call ends. The recording and transcript are saved." },
+        { "time": "11:32", "who": "ai", "text": "Notes written: 3 decisions, 2 objections, 4 next steps." },
+        { "time": "11:33", "who": "system", "text": "CRM deal moved to proposal stage. Two tasks created." },
+        { "time": "11:34", "who": "ai", "text": "Follow-up email drafted and left in your drafts." },
+        { "time": "11:41", "who": "team", "text": "You read the draft, change one line and send it." }
+      ]
+    }
+  },
+  {
+    "slug": "ai-audit",
+    "name": "AI audit",
+    "icon": "search-check",
+    "short": "A free 30-minute review of one process. You get a costed plan showing what to automate first and what it should return.",
+    "audience": "Owners who suspect something could be automated but do not want to buy a project to find out. You bring one slow, repetitive process. No preparation is needed.",
+    "agenda": [
+      { "time": "0 to 5 min", "title": "You pick one process", "text": "The job that eats the most time, and who does it today." },
+      { "time": "5 to 15 min", "title": "We walk through it step by step", "text": "Where it starts, which tools it touches, where it stalls and how often it runs." },
+      { "time": "15 to 25 min", "title": "We put numbers on it", "text": "Hours a week, what an hour costs you, and what a mistake or a missed enquiry costs." },
+      { "time": "25 to 30 min", "title": "You hear a straight answer", "text": "Whether it is worth automating, roughly what it would cost, and what happens next. If it is not worth it, we say so." }
+    ],
+    "planContents": [
+      "The process as it runs today, drawn as a simple map",
+      "The one automation to build first, and why that one",
+      "A fixed setup fee and monthly retainer for it",
+      "The third-party tools it needs and what they are likely to cost you",
+      "The expected return, worked from your own numbers, with every assumption written down",
+      "What could go wrong, and how each risk is handled",
+      "A pilot plan: the scope, the timeline and how we will both judge it"
+    ],
+    "deliverables": [
+      "The written plan as a PDF, yours to keep and to take to anyone else",
+      "One email with the plan. No sales calls after it unless you ask"
+    ],
+    "timeline": { "value": "30 minutes", "note": "Written plan within 2 working days" },
+    "startsFrom": { "text": "Free", "note": "No card, no commitment" },
+    "mock": {
+      "type": "ledger",
+      "caption": "From a sample plan: lead capture to CRM",
+      "note": "Sample figures to show the layout of the plan. Your plan uses your own numbers.",
+      "rows": [
+        { "label": "Time spent today", "note": "Copying enquiries into the CRM", "value": "14 hrs / week" },
+        { "label": "Time after automation", "note": "Checking the odd ones", "value": "3 hrs / week" },
+        { "label": "Value of the time saved", "note": "At $30 an hour", "value": "$1,430 / mo" },
+        { "label": "Monthly retainer", "value": "−$750 / mo" },
+        { "label": "Setup fee", "note": "One-off", "value": "$2,500" }
+      ],
+      "total": { "label": "Setup fee recovered in", "value": "4 months" }
+    }
+  }
+]

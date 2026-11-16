@@ -1,0 +1,122 @@
+{
+  "hero-team": {
+    "src": "https://images.unsplash.com/photo-1758876022088-2d46af5635c2?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8N3x8c21hbGwlMjB0ZWFtJTIwd29ya2luZyUyMGJyaWdodCUyMG1vZGVybiUyMG9mZmljZSUyMGxhcHRvcHxlbnwxfDB8fHwxNzk0ODM5MzI5fDA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1758876022088-2d46af5635c2?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8N3x8c21hbGwlMjB0ZWFtJTIwd29ya2luZyUyMGJyaWdodCUyMG1vZGVybiUyMG9mZmljZSUyMGxhcHRvcHxlbnwxfDB8fHwxNzk0ODM5MzI5fDA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 900,
+    "alt": "Woman smiling at her laptop in a bright office while a bearded colleague with a clipboard stands behind",
+    "credit": "Vitaly Gariev",
+    "creditUrl": "https://unsplash.com/@silverkblack?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/woman-working-on-laptop-with-man-behind-her-_RPfBzHpHEs?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "hero-phone": {
+    "src": "https://images.unsplash.com/photo-1629697776809-f37ceac39e77?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8Mnx8aGFuZCUyMGhvbGRpbmclMjBwaG9uZXxlbnwxfDF8fHwxNzk0ODM5MzI5fDA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1629697776809-f37ceac39e77?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8Mnx8aGFuZCUyMGhvbGRpbmclMjBwaG9uZXxlbnwxfDF8fHwxNzk0ODM5MzI5fDA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 2400,
+    "alt": "Hand holding a smartphone with a blank white screen outdoors against soft green blur",
+    "credit": "Mediamodifier",
+    "creditUrl": "https://unsplash.com/@mediamodifier?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/person-holding-white-iphone-5-c-voRfgeyiBKA?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "industry-real-estate": {
+    "src": "https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MXx8aG91c2UlMjBrZXlzJTIwbW9kZXJuJTIwaG9tZXxlbnwxfDB8fHwxNzk0ODM5MzQzfDA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MXx8aG91c2UlMjBrZXlzJTIwbW9kZXJuJTIwaG9tZXxlbnwxfDB8fHwxNzk0ODM5MzQzfDA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 1067,
+    "alt": "Bright modern open-plan home interior with a white kitchen island and light wood floors",
+    "credit": "Zac Gudakov",
+    "creditUrl": "https://unsplash.com/@zacgudakov?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/white-and-brown-kitchen-counter-UPbYh3A5cdg?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "industry-clinics-dental": {
+    "src": "https://images.unsplash.com/photo-1629909615184-74f495363b67?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8M3x8bW9kZXJuJTIwZGVudGFsJTIwY2xpbmljJTIwcmVjZXB0aW9ufGVufDF8MHx8fDE3OTQ4MzkzMzB8MA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1629909615184-74f495363b67?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8M3x8bW9kZXJuJTIwZGVudGFsJTIwY2xpbmljJTIwcmVjZXB0aW9ufGVufDF8MHx8fDE3OTQ4MzkzMzB8MA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 1069,
+    "alt": "Bright modern dental treatment room with a teal patient chair, overhead light and large window",
+    "credit": "Benyamin Bohlouli",
+    "creditUrl": "https://unsplash.com/@benyamin_bohlouli?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/white-and-blue-hospital-bed-LQ698TTvGpA?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "industry-agencies-sales": {
+    "src": "https://images.unsplash.com/photo-1787647562201-113361490c83?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MTF8fHRlYW0lMjBtZWV0aW5nJTIwdmlkZW8lMjBjYWxsJTIwbGFwdG9wJTIwb2ZmaWNlfGVufDF8MHx8fDE3OTQ4MzkzMzF8MA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1787647562201-113361490c83?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MTF8fHRlYW0lMjBtZWV0aW5nJTIwdmlkZW8lMjBjYWxsJTIwbGFwdG9wJTIwb2ZmaWNlfGVufDF8MHx8fDE3OTQ4MzkzMzF8MA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 900,
+    "alt": "Four colleagues at a shared table in a bright office, one on a video call on the monitor",
+    "credit": "Vitaly Gariev",
+    "creditUrl": "https://unsplash.com/@silverkblack?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/people-in-meeting-room-watching-video-bQKXEyMAnsI?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "industry-bookkeeping": {
+    "src": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8Mnx8ZGVzayUyMGxhcHRvcCUyMGludm9pY2VzJTIwcmVjZWlwdHMlMjBjYWxjdWxhdG9yJTIwYm9va2tlZXBpbmd8ZW58MXwwfHx8MTc5NDgzOTM0MHww&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8Mnx8ZGVzayUyMGxhcHRvcCUyMGludm9pY2VzJTIwcmVjZWlwdHMlMjBjYWxjdWxhdG9yJTIwYm9va2tlZXBpbmd8ZW58MXwwfHx8MTc5NDgzOTM0MHww&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 1067,
+    "alt": "Overhead view of a white desk with a laptop showing a spreadsheet, a calculator, notebook and coffee",
+    "credit": "Microsoft 365",
+    "creditUrl": "https://unsplash.com/@microsoft365?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/a-person-sitting-at-a-table-with-a-laptop-oUbzU87d1Gc?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "about-workspace": {
+    "src": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MXx8ZGV2ZWxvcGVyJTIwZGVzayUyMGxhcHRvcCUyMGNvZGV8ZW58MXwwfHx8MTc5NDgzOTM0MHww&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MXx8ZGV2ZWxvcGVyJTIwZGVzayUyMGxhcHRvcCUyMGNvZGV8ZW58MXwwfHx8MTc5NDgzOTM0MHww&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 1065,
+    "alt": "Tidy white desk with a laptop showing code, a coffee mug, a phone and a monitor beside a window",
+    "credit": "Christopher Gower",
+    "creditUrl": "https://unsplash.com/@cgower?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/a-macbook-with-lines-of-code-on-its-screen-on-a-busy-desk-m_HRfLhgABo?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "process-whiteboard": {
+    "src": "https://images.unsplash.com/photo-1542744094-24638eff58bb?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8NXx8d2hpdGVib2FyZCUyMHBsYW5uaW5nJTIwc3RpY2t5JTIwbm90ZXMlMjB3b3JrZmxvd3xlbnwxfDB8fHwxNzk0ODM5MzQxfDA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1542744094-24638eff58bb?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8NXx8d2hpdGVib2FyZCUyMHBsYW5uaW5nJTIwc3RpY2t5JTIwbm90ZXMlMjB3b3JrZmxvd3xlbnwxfDB8fHwxNzk0ODM5MzQxfDA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 1066,
+    "alt": "Man in a patterned shirt drawing a workflow diagram with email steps on a whiteboard",
+    "credit": "Campaign Creators",
+    "creditUrl": "https://unsplash.com/@campaign_creators?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/man-writing-on-white-board---kQ4tBklJI?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "cta-city": {
+    "src": "https://images.unsplash.com/photo-1621831337128-35676ca30868?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwZ2xhc3MlMjBvZmZpY2UlMjBidWlsZGluZyUyMGJsdWV8ZW58MXwwfHx8MTc5NDgzOTM0Mnww&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1621831337128-35676ca30868?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwZ2xhc3MlMjBvZmZpY2UlMjBidWlsZGluZyUyMGJsdWV8ZW58MXwwfHx8MTc5NDgzOTM0Mnww&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 1067,
+    "alt": "Curved glass office facade against a clear pale blue sky, seen from below",
+    "credit": "Kenrick Baksh",
+    "creditUrl": "https://unsplash.com/@kenrick?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/white-and-blue-glass-walled-building-Wm8opOd-MDE?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  },
+  "texture-abstract": {
+    "src": "https://images.unsplash.com/photo-1585854467604-cf2080ccef31?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MXx8YWJzdHJhY3QlMjBibHVlJTIwd2hpdGUlMjBzb2Z0JTIwbGlnaHQlMjB0ZXh0dXJlfGVufDF8MHx8fDE3OTQ4MzkzNDN8MA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1600",
+    "srcSmall": "https://images.unsplash.com/photo-1585854467604-cf2080ccef31?ixid=M3wxMTM1NzkxfDB8MXxzZWFyY2h8MXx8YWJzdHJhY3QlMjBibHVlJTIwd2hpdGUlMjBzb2Z0JTIwbGlnaHQlMjB0ZXh0dXJlfGVufDF8MHx8fDE3OTQ4MzkzNDN8MA&ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=800",
+    "width": 1600,
+    "height": 1064,
+    "alt": "Soft flowing waves in pale blue and white, an abstract background",
+    "credit": "Debora Pilati",
+    "creditUrl": "https://unsplash.com/@_debs_?utm_source=veeboo_ai_site&utm_medium=referral",
+    "photoUrl": "https://unsplash.com/photos/wavy-blue-and-white-abstract-architecture-dOG0z4-gqp0?utm_source=veeboo_ai_site&utm_medium=referral",
+    "source": "Unsplash",
+    "license": "Unsplash License"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Blog",
+    "description": "Plain-English notes for small-business owners on what is worth automating, what it costs, how to work out the payback, and when to leave a process alone."
+  },
+  "hero": {
+    "title": "Notes on what is worth automating",
+    "lede": "Written for owners, not engineers. How to cost an automation, what goes wrong, and when to leave a process alone."
+  },
+  "list": {
+    "latestLabel": "Latest post",
+    "moreTitle": "Earlier posts",
+    "readLabel": "Read the post",
+    "minutesLabel": "min read",
+    "byLabel": "By",
+    "empty": "The first post is being written. Check back soon."
+  },
+  "next": {
+    "title": "What we are writing next",
+    "text": "Posts are published when they are useful, not on a schedule. These are in progress.",
+    "topics": [
+      "What a missed-call text-back does, step by step, and where it fails",
+      "Questions to ask any automation builder before you give them access to your accounts",
+      "What a handover document should contain so you are never stuck with one supplier"
+    ]
+  },
+  "post": {
+    "backLabel": "All posts",
+    "cta": {
+      "title": "Want this arithmetic done on your own process?",
+      "text": "That is what the free audit is. Thirty minutes on one process, then a written plan with the cost, the expected return and the payback period. If the numbers say do not automate it, the plan says so."
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "currency": "USD",
+  "currencySymbol": "$",
+  "note": "Prices are in US dollars and are starting prices. Your written plan from the audit has a fixed quote.",
+  "ownerNote": "TODO: confirm prices, the payment split in the process steps, the notice period and the hours of small changes per plan",
+  "meta": {
+    "title": "Pricing",
+    "description": "Three plans, each with a one-off setup fee and a month-to-month retainer. You own every account. Work out the payback from your own numbers."
+  },
+  "hero": {
+    "title": "A setup fee, then a monthly retainer",
+    "lede": "The setup fee pays for the build. The retainer keeps it running and improving. Pick the plan by what you want to end up with, not by a feature count.",
+    "calculatorButton": "Work out the payback"
+  },
+  "labels": {
+    "setupFee": "Setup fee",
+    "setupNote": "One-off",
+    "monthly": "Monthly retainer",
+    "monthlyNote": "Month to month",
+    "bestFor": "Best for",
+    "outcome": "You end up with",
+    "featured": "Our pick for most small teams"
+  },
+  "tiers": [
+    {
+      "slug": "one-automation",
+      "name": "One automation",
+      "bestFor": "A team with one clear, repetitive job eating hours every week.",
+      "outcome": "One job done automatically, start to finish.",
+      "setupFee": "$2,500",
+      "monthly": "$750",
+      "featured": false,
+      "includes": [
+        "One workflow, such as missed-call text-back or lead capture to CRM",
+        "Up to 3 of your tools connected",
+        "Live in 2 to 4 weeks",
+        "Monitoring, fixes and up to 2 hours of small changes a month",
+        "A monthly report: runs, failures and hours saved"
+      ],
+      "cta": "Book a free AI audit"
+    },
+    {
+      "slug": "connected-system",
+      "name": "Connected system",
+      "bestFor": "A business that wants a whole process handled, from first enquiry to booked appointment.",
+      "outcome": "One process run end to end, with an AI agent talking to your customers.",
+      "setupFee": "$5,500",
+      "monthly": "$1,500",
+      "featured": true,
+      "includes": [
+        "Up to 4 connected automations around one process",
+        "One AI agent on your website, inbox or WhatsApp",
+        "Handover rules, so a person takes over when they should",
+        "Up to 6 of your tools connected",
+        "Monitoring, fixes and up to 5 hours of small changes a month",
+        "A monthly review call with the numbers"
+      ],
+      "cta": "Book a free AI audit"
+    },
+    {
+      "slug": "custom",
+      "name": "Custom",
+      "bestFor": "Voice receptionists, several locations or teams, or systems that need careful joining up.",
+      "outcome": "Several processes, or a phone line, working across the business.",
+      "setupFee": "Custom",
+      "monthly": "Custom",
+      "guide": "As a guide: setup from $8,000 and a retainer from $2,000 a month.",
+      "featured": false,
+      "includes": [
+        "Voice AI on your phone line, or agents on several channels",
+        "More than one process or team in a single plan",
+        "Custom connections where no ready-made one exists",
+        "A named person to escalate to, and agreed response times",
+        "A fixed quote after the audit"
+      ],
+      "cta": "Let's scope it"
+    }
+  ],
+  "calculator": {
+    "title": "Will it pay for itself?",
+    "lede": "Put in your own numbers. If the sums do not work, this will say so.",
+    "defaults": { "hoursPerWeek": 15, "hourlyCost": 30, "sharePercent": 60, "tier": "one-automation" },
+    "limits": {
+      "hoursPerWeek": { "min": 1, "max": 80, "step": 1 },
+      "hourlyCost": { "min": 5, "max": 300, "step": 1 },
+      "sharePercent": { "min": 10, "max": 100, "step": 5 }
+    },
+    "weeksPerMonth": 4.33,
+    "maxMonths": 36,
+    "inputs": {
+      "legend": "Your numbers",
+      "hours": "Hours of manual work each week",
+      "hoursHint": "Across everyone who does this job.",
+      "hoursUnit": "hours",
+      "cost": "What an hour of that work costs you",
+      "costHint": "Wages plus overheads, per hour.",
+      "share": "Share the automation can take over",
+      "shareHint": "Most jobs keep a part that needs a person.",
+      "tier": "Plan"
+    },
+    "tierOption": "{setup} setup, {monthly}/mo",
+    "result": {
+      "caption": "Your estimate",
+      "tag": "Estimate",
+      "value": "Value of time saved each month",
+      "valueNote": "{hours} hours at {cost} an hour",
+      "retainer": "Minus monthly retainer",
+      "net": "Net each month",
+      "setup": "Setup fee to recover",
+      "pays": "Pays back in {n} months",
+      "paysOne": "Pays back in 1 month",
+      "slow": "Takes more than 3 years to pay back at these numbers; a smaller automation may fit better",
+      "none": "Does not pay back at these numbers; a smaller automation may fit better"
+    },
+    "disclaimer": "This is an estimate worked from the numbers you entered, not a promise of results. It counts saved time only. It leaves out third-party tool costs and any extra income from faster replies.",
+    "staticNote": "This is an example using starting numbers. With JavaScript turned on, it updates as you type."
+  },
+  "everyPlan": {
+    "title": "What every plan includes",
+    "lede": "The same terms apply whether you buy one automation or ten.",
+    "items": [
+      "You own the accounts. Everything is built in tools registered to your business, and we are invited in as a user.",
+      "No lock-in. If you leave, you remove our access and everything keeps running as it was.",
+      "The retainer is month to month. Stop it with 30 days' notice.",
+      "The person you speak to on the audit call is the person who builds it.",
+      "A written map and a video walkthrough of everything that is built."
+    ],
+    "retainerTitle": "What the retainer actually covers",
+    "retainer": [
+      { "label": "Monitoring", "text": "Every run is watched. A failed step raises an alert, and the failed item is kept and retried." },
+      { "label": "Fixes", "text": "When a tool changes its settings or a connection breaks, it is repaired at no extra charge." },
+      { "label": "Small changes", "text": "New wording, an extra field, a changed rule. Each plan has a set number of hours a month for these." },
+      { "label": "Model and API costs", "text": "We watch what the AI models cost you each month, flag anything unusual and switch to a cheaper model where the results hold up." }
+    ],
+    "excludedTitle": "What is not included",
+    "excludedLede": "These are billed by the provider to your own accounts, at their prices, with no markup from us. Your written plan lists each one and its expected monthly cost before you commit.",
+    "excluded": [
+      "Subscriptions to third-party tools, such as n8n, Make, Zapier or your CRM",
+      "AI model usage on the OpenAI API or Claude API",
+      "Voice minutes, phone numbers and WhatsApp Business message fees",
+      "New automations outside the agreed scope, which are quoted separately"
+    ]
+  },
+  "comparison": {
+    "title": "The three plans side by side",
+    "rowHeader": "What differs",
+    "rows": [
+      {
+        "label": "What you end up with",
+        "values": ["One repetitive job done automatically", "One whole process handled, with an AI agent talking to customers", "Several processes, or a phone line, working across the business"]
+      },
+      { "label": "Automations built", "values": ["1", "Up to 4, connected", "Agreed in the plan"] },
+      { "label": "AI agent or chatbot", "values": ["Not included", "One agent on one channel", "Several channels, voice included"] },
+      { "label": "Tools connected", "values": ["Up to 3", "Up to 6", "As many as it needs"] },
+      { "label": "Time to go live", "values": ["2 to 4 weeks", "4 to 6 weeks", "Agreed in the plan"] },
+      { "label": "Small changes each month", "values": ["Up to 2 hours", "Up to 5 hours", "Agreed in the plan"] },
+      { "label": "Check-ins", "values": ["Monthly report by email", "Monthly review call", "A call every two weeks"] }
+    ]
+  },
+  "process": {
+    "title": "Four steps, and which fee applies at each",
+    "lede": "You can stop after any step.",
+    "steps": [
+      {
+        "title": "Audit",
+        "text": "A 30-minute call about one process, then a written plan with a fixed quote within 2 working days.",
+        "fee": "Free"
+      },
+      {
+        "title": "Pilot",
+        "text": "We build one narrow workflow and run it on real work for 2 to 4 weeks, against a measure we agree up front.",
+        "fee": "Half the setup fee, paid to start"
+      },
+      {
+        "title": "Build",
+        "text": "If the pilot meets its measure, we finish the rest of the scope, test it and hand over the map and walkthrough.",
+        "fee": "Second half of the setup fee, paid at go-live"
+      },
+      {
+        "title": "Retainer",
+        "text": "Monitoring, fixes and small changes every month, with a report on what ran and what it saved.",
+        "fee": "Monthly retainer, from the first full month after go-live"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Pricing questions",
+    "items": [
+      {
+        "q": "Why is there a setup fee and a retainer?",
+        "a": "They pay for different work. The setup fee covers mapping the process, building, testing and handing over. The retainer covers keeping it running: tools change, connections break and your business changes."
+      },
+      {
+        "q": "Can I stop the retainer?",
+        "a": "Yes, with 30 days' notice. The automations stay in your accounts and keep running. What stops is our monitoring, fixes and changes."
+      },
+      {
+        "q": "What will the third-party tools cost me?",
+        "a": "It depends on the tools and the volume, so there is no honest single figure. Your written plan lists every tool the build needs and its expected monthly cost, and you see that before you commit."
+      },
+      {
+        "q": "What if the pilot does not work?",
+        "a": "The pilot is kept narrow so that you find out in weeks, not months. If it misses the measure we agreed, you can stop there. You keep what was built, and no retainer starts."
+      },
+      {
+        "q": "Do you charge for the audit?",
+        "a": "No. It is a 30-minute call and a written plan, and the plan is yours to keep whether or not you hire us."
+      },
+      {
+        "q": "Will the price change once work has started?",
+        "a": "Not unless the scope does. The plan has a fixed quote. If you ask for something outside it, you get a separate price before any work is done."
+      }
+    ]
+  }
+}

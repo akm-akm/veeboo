@@ -1,0 +1,5 @@
+.credits-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+.credits-item { display: flex; gap: 1rem; align-items: flex-start; }
+.credits-item__thumb { flex: none; width: 80px; height: auto; border-radius: 6px; background: #e8eef9; }
+.credits-item__line { margin: 0; font-weight: 500; }
+.credits-item__alt { margin: 0.2rem 0 0; font-size: 0.875rem; opacity: 0.75; }

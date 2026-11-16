@@ -1,0 +1,299 @@
+/* Industries index and niche pages. Every class is prefixed industries-. */
+
+.industries-label {
+  margin-bottom: 0.75rem;
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.industries-item-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 0.35rem;
+  font: 600 var(--step-1) / 1.25 var(--font-display);
+  letter-spacing: -0.01em;
+}
+.industries-head {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+/* ---------- Index: one large row per niche ---------- */
+.industries-index {
+  padding-top: 0;
+}
+.industries-rows {
+  border-top: 2px solid var(--ink);
+}
+.industries-row {
+  display: grid;
+  gap: 1.75rem;
+  padding-block: clamp(2rem, 5vw, 3.5rem);
+  border-bottom: 1px solid var(--line);
+}
+.industries-row__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: var(--brand-tint);
+  color: var(--brand);
+}
+.industries-row__main .h2 {
+  margin-bottom: 0.75rem;
+}
+.industries-row__main .h2 a {
+  text-decoration: none;
+}
+.industries-row__main .h2 a:hover {
+  color: var(--brand);
+}
+.industries-row__autos {
+  padding: 1.25rem 1.35rem;
+  border-left: 3px solid var(--brand);
+  background: var(--surface);
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+}
+.industries-row__autos ul {
+  display: grid;
+  gap: 0.6rem;
+}
+.industries-row__autos li {
+  font: 600 var(--step-1) / 1.25 var(--font-display);
+  letter-spacing: -0.01em;
+}
+@media (min-width: 900px) {
+  .industries-row {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+  }
+}
+.industries-other {
+  display: grid;
+  gap: 0.5rem;
+}
+.industries-other .lede {
+  margin-top: 1rem;
+}
+.industries-other .actions {
+  gap: 1rem 1.5rem;
+}
+
+/* Stock photos: one tint and radius so the four niches read as a set. Source files are ~600px wide. */
+.industries-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-l);
+  background: var(--brand-tint);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand) 14%, transparent);
+}
+.industries-row__photo {
+  aspect-ratio: 4 / 3;
+}
+@media (min-width: 900px) {
+  .industries-row--photo {
+    grid-template-columns: minmax(0, 18rem) minmax(0, 1fr);
+  }
+  .industries-row--photo .industries-row__autos {
+    grid-column: 2;
+  }
+}
+@media (min-width: 1100px) {
+  .industries-row--photo {
+    grid-template-columns: minmax(0, 22rem) minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 3.5rem);
+  }
+  .industries-row--photo .industries-row__autos {
+    grid-column: auto;
+  }
+}
+
+/* ---------- Niche page: hero visual ---------- */
+.industries-visual__caption {
+  margin-top: 0.75rem;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+@media (min-width: 900px) {
+  .industries-visual--chat {
+    justify-self: center;
+    width: 100%;
+    max-width: 24rem;
+    margin-inline: auto;
+  }
+}
+
+/* ---------- Where the time goes ---------- */
+@media (min-width: 900px) {
+  .industries-pains__split {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    column-gap: clamp(2rem, 5vw, 4.5rem);
+    grid-template-areas:
+      'head list'
+      'photo list';
+    grid-template-rows: max-content 1fr;
+    row-gap: 0;
+  }
+  .industries-pains__split > .industries-head {
+    grid-area: head;
+  }
+  .industries-pains__split > .industries-list {
+    grid-area: list;
+  }
+  .industries-pains__split > .industries-pains__photo {
+    grid-area: photo;
+    align-self: start;
+    margin-top: 0.5rem;
+  }
+}
+.industries-pains {
+  padding-top: clamp(1.5rem, 4vw, 3rem);
+}
+.industries-list {
+  border-top: 2px solid var(--ink);
+}
+.industries-list li {
+  padding-block: 1.15rem;
+  border-bottom: 1px solid var(--line);
+}
+.industries-list p {
+  max-width: 60ch;
+  color: var(--ink-soft);
+}
+
+/* ---------- What we set up ---------- */
+.industries-autos {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  border-top: 2px solid var(--ink);
+}
+.industries-auto {
+  display: grid;
+  gap: 1rem;
+  padding-block: clamp(1.35rem, 3vw, 2rem);
+  border-bottom: 1px solid color-mix(in srgb, var(--brand) 24%, transparent);
+}
+.industries-auto__facts {
+  display: grid;
+  gap: 1rem;
+}
+.industries-auto__facts dt {
+  margin-bottom: 0.2rem;
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--brand);
+}
+.industries-auto__facts dd {
+  max-width: 60ch;
+  line-height: 1.5;
+}
+@media (min-width: 700px) {
+  .industries-auto__facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1040px) {
+  .industries-auto {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 3fr);
+    gap: 2rem;
+  }
+}
+
+/* ---------- What it should be worth ---------- */
+.industries-bullets {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.15rem;
+  list-style: disc;
+}
+.industries-bullets li::marker {
+  color: var(--brand);
+}
+.industries-worth__sum {
+  display: grid;
+  gap: 0.85rem;
+}
+.industries-worth__sum p {
+  max-width: 62ch;
+}
+.industries-worth .ledger__row dd {
+  white-space: nowrap;
+}
+
+/* ---------- Tools and trust (dark section) ---------- */
+.industries-fit .h2 {
+  margin-bottom: 1.5rem;
+}
+.industries-tools {
+  margin-bottom: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+.industries-tools > div {
+  display: grid;
+  gap: 0.25rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+.industries-tools dt {
+  font-weight: 600;
+}
+.industries-tools dd,
+.industries-trust p {
+  color: #c3cfee;
+  line-height: 1.5;
+}
+.industries-trust {
+  display: grid;
+  gap: 1.35rem;
+}
+.industries-trust li {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+.industries-trust .icon {
+  margin-top: 0.25rem;
+  color: var(--marigold);
+}
+
+/* ---------- Typical first project ---------- */
+.industries-pilot .industries-item-title {
+  margin-bottom: 1rem;
+}
+.industries-timeline {
+  border-top: 1px solid color-mix(in srgb, var(--brand) 24%, transparent);
+}
+.industries-timeline li {
+  display: grid;
+  grid-template-columns: 7.25rem minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 0.85rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--brand) 24%, transparent);
+}
+.industries-timeline strong {
+  font-family: var(--font-display);
+  color: var(--brand-deep);
+}
+.industries-pilot__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--ink);
+}
+.industries-pilot__foot p {
+  max-width: 52ch;
+  font-weight: 500;
+}
