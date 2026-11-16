@@ -10,6 +10,15 @@ import { parseMarkdownFile } from './src/markdown.mjs';
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.join(ROOT, 'dist');
 const CONTENT_DIR = path.join(ROOT, 'content');
+// Set BASE_PATH=/repo-name when the site is served from a sub-folder (GitHub Pages project sites).
+// Leave it unset for a site at the root of its own domain (Vercel, custom domains).
+const BASE_PATH = (process.env.BASE_PATH || '').replace(/\/+$/, '');
+
+// Root-relative links ("/pricing/", "/assets/...") get the base path in front of them.
+function withBasePath(html) {
+  if (!BASE_PATH) return html;
+  return html.replace(/\b(href|src|action)="\/(?!\/)/g, `$1="${BASE_PATH}/`);
+}
 
 function loadContent() {
   const content = {};
@@ -59,7 +68,7 @@ async function build() {
   const site = content.site;
   fs.rmSync(DIST, { recursive: true, force: true });
   copyDir(path.join(ROOT, 'public'), DIST);
-  fs.writeFileSync(path.join(DIST, 'assets', 'site.css'), bundleCss());
+  fs.writeFileSync(path.join(DIST, 'assets', 'site.css'), bundleCss().replace(/url\((['"]?)\/(?!\/)/g, `url($1${BASE_PATH}/`));
 
   const pagesDir = path.join(ROOT, 'src', 'pages');
   const pages = [];
@@ -80,7 +89,7 @@ async function build() {
     seen.add(page.path);
     const file = outputFile(page.path);
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, renderPage(page, { content, site }));
+    fs.writeFileSync(file, withBasePath(renderPage(page, { content, site })));
   }
 
   const indexable = pages.filter((page) => !page.noindex && !page.path.endsWith('.html'));

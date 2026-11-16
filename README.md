@@ -95,8 +95,14 @@ Sans for text (loaded from Google Fonts). Colours, type sizes and spacing are va
 3. Set your real domain in `content/site.json` (`url`) before the first production deploy: the sitemap, canonical tags
    and share images use it.
 
-Any static host works the same way (Netlify, Cloudflare Pages, GitHub Pages): build command `node build.mjs`, publish
-folder `dist`.
+Any static host works the same way (Netlify, Cloudflare Pages): build command `node build.mjs`, publish folder `dist`.
+
+## Deploy to GitHub Pages
+
+`.github/workflows/pages.yml` builds and publishes the site on every push to `main`. A project site is served from
+`https://<user>.github.io/<repo>/`, so the workflow sets `BASE_PATH=/<repo>` and the builder prefixes every link with it.
+With a custom domain, remove the `BASE_PATH` line from the workflow. In the repository settings, Pages > Source must be
+"GitHub Actions".
 
 ## Before launch
 
